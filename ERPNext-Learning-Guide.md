@@ -32,11 +32,11 @@ ERPNext already has basic documentation, videos and a support group with plenty 
 ### 1.2 Structure
 The following course or tutorial is divided into 5 modules, which will enable you to master ERPNext.
 
-Module 1: Introduction to ERPNext
-Module 2: Basic usage
-Module 3: Intermediate usage
-Module 4: Advanced usage
-Module 5: Becoming an expert
+> Module 1: Introduction to ERPNext
+> Module 2: Basic usage
+> Module 3: Intermediate usage
+> Module 4: Advanced usage
+> Module 5: Becoming an expert
 
 This course is divided in 5 modules. Each module will take your learning from the general
 to the more specific, in the same manner that we talk about a ship in general terms, each 
@@ -229,6 +229,6 @@ The assets module with its categories and assets, which we will learn how to dep
 The WebSite module allowed us to create a simple webpage to serve to all users accesing from the web
 
 ## Module 3: Intermediate Use
-
+[pending]
 TK #Pending a procedure writeup
 1.5.2 - Remote server installation
