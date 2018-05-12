@@ -332,6 +332,88 @@ The WebSite module allowed us to create a simple webpage to serve to all users a
 ##### 3.2.11.7 - Blog Configuration (Video 111)
 ##### 3.2.11.8 - Blog Entry (Video 112)
 ### 3.3 Module 3 Conclusion
+
+## Modulo 4: Advanced Use
+Que veremos aquí
+### 4.1 Advanced Operation
+#### 4.1.3 - Domain Specific Configuration
+##### 4.1.3.1 - Agriculture Module (Video 113)
+##### 4.1.3.2 - Hospitality Module(Video 114)
+##### 4.1.3.3 - Healthcare Module (Video 115)
+##### 4.1.3.4 - Education Module (Video 116)
+##### 4.1.3.6 - Services Module (Video 117)
+##### 4.1.3.7 - Manufacture Module (Video 118)
+#### 4.1.2 - Data Backups (Video 119)
+#### 4.1.3 - Form Customization (Video 120)
+	A best practice to use here is to prepend the name of your company to field names (A good practice to prevent errors when updating. You can always copy data from one field to another (column) using mariadb commands later)
+	Adding new fields to main doctypes (Customize)
+#### 4.1.4 - Personalized Fields (Video 121)
+		A best practice to use here is to prepend the name of your company to field names (A good practice to prevent errors when updating. You can always copy data from one field to another (column) using mariadb commands later)
+		This particular instruction helps with child table doctypes
+#### 4.1.5 - Custom scripts(Video 122)
+#### 4.1.6 - Email notifications (Video 123)
+#### 4.1.7 - Print formats (Video 124)
+	Basic jinja for print templates
+	Examples
+#### 4.1.8 - Print Style (Video 125)
+#### 4.1.9 - Print Format Builder (Video 126)
+### 4.1.10 - Address Format (Video 127)
+
+### 4.2 Program Modules
+#### 4.2.1 - Accounts
+##### 4.2.1.1 - Trial Balance (Video 128)
+##### 4.2.1.2 - Payment request (Video 129)
+##### 4.2.1.3 - Accounts receivable (Video 130)
+##### 4.2.1.4 - Accounts payable (Video 131)
+##### 4.2.1.5 - Bank reconciliation statements (Video 132)
+##### 4.2.1.6 - Bank change summary (Video 133)
+##### 4.2.1.7 - Bank guarantee (Video 134)
+##### 4.2.1.8 - Fiscal rule (Video 135)
+##### 4.2.1.9 - Budget (Video 136)
+##### 4.2.1.10 - Budget Variance (Video 137)
+##### 4.2.1.11 - Monthly Distrubtion  for Budgets (Video 138)
+##### 4.2.1.12 - Period closing (Video 139)
+#### 4.2.2 - Human Resources
+##### 4.2.2.1 - Attendance (Video 140)
+##### 4.2.2.2 - Employee Attendance Tool (Video 141)
+##### 4.2.2.3 - Attendance upload (Video 142)
+##### 4.2.2.4 - License request (for abscense) (Video 143)
+##### 4.2.2.5 - License type (para ausentarse) (Video 144)
+##### 4.2.2.6 - Vacation Asignations (Video 145)
+##### 4.2.2.7 - Vacation Assignment Tools (Video 146)
+##### 4.2.2.8 - Block List (Video 147)
+#### 4.2.3 - Stock
+##### 4.2.3.1 - Product Attributes (Video 148)
+##### 4.2.3.2 - Product Variants (Video 149)
+##### 4.2.3.3 - Stock Reconciliation (Video 150)
+##### 4.2.3.4 -  Packing List (empaque) (Video 151)
+##### 4.2.3.5 - Series Numbering (Video 152)
+##### 4.2.3.6 - Lot Number (Video 153)
+#### 4.2.4 - Buying
+##### 4.2.4.1 - Inviting suppliers to the ERPNext portal  for your Company (Video 154)
+##### 4.2.4.2 - Entering supplier quotation on your ERPNext portal (Video 155)
+#### 4.2.5 - Selling
+##### 4.2.5.1 - Shipping Rule (Video 156)
+##### 4.2.5.2 - Sales Analytics (Video 157)
+##### 4.2.5.3 - Customer loyalty (Video 158)
+#### 4.2.6 - CRM (Customer Resource Management)
+###### 4.2.6.1 - SMS Entry (Video 159)
+###### 4.2.6.2 - SMS Settings (Video 160)
+##### 4.2.7 - Manufacturing
+##### 4.2.7.1 - Open Production Orders(Video 161)
+##### 4.2.7.2 - Production Orders in Progress (Video 162)
+##### 4.2.7.3 - Delivered products from Production Orders (Video 163)
+##### 4.2.7.4 - Completed Production Orders (Video 164)
+##### 4.2.7.5 - Production Analysis (Video 165)
+#### 4.2.8 - Projectos
+##### 4.2.8.1 - Daily work hour summary (Video 166)
+##### 4.2.8.2 - Precise stock measurement (Video 167)
+#### 4.2.9 - Assets
+##### 4.2.9.1 - Asset movement (Video 168)
+##### 4.2.9.2 - Asset depreciations and pending balance (Video 169)
+### 4.3 Module 4 Conclusion
+What we saw here summary
+
 [pending]
 TK #Pending a procedure writeup
 1.5.2 - Remote server installation
