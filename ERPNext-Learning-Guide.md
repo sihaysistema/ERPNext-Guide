@@ -32,11 +32,11 @@ ERPNext already has basic documentation, videos and a support group with plenty 
 ### 1.2 Structure
 The following course or tutorial is divided into 5 modules, which will enable you to master ERPNext.
 
-> Module 1: Introduction to ERPNext
-> Module 2: Basic usage
-> Module 3: Intermediate usage
-> Module 4: Advanced usage
-> Module 5: Becoming an expert
+> * Module 1: Introduction to ERPNext
+> * Module 2: Basic usage
+> * Module 3: Intermediate usage
+> * Module 4: Advanced usage
+> * Module 5: Becoming an expert
 
 This course is divided in 5 modules. Each module will take your learning from the general
 to the more specific, in the same manner that we talk about a ship in general terms, each 
@@ -229,6 +229,109 @@ The assets module with its categories and assets, which we will learn how to dep
 The WebSite module allowed us to create a simple webpage to serve to all users accesing from the web
 
 ## Module 3: Intermediate Use
+### 3.1 Intermediate use
+#### 3.1.1 - Roles (Video 039)
+#### 3.1.2 - Permissions (Video 040)
+#### 3.1.3 - Series and Numbering (Video 041)
+#### 3.1.4 - System settings (Video 042)
+#### 3.1.5 - Global settings (Video 043)
+#### 3.1.6 - Account settings (Video 044)
+#### 3.1.7 - Configuring e-mail account (Video 045)
+#### 3.1.8 - Print settings (Video 046)
+#### 3.1.9 - Personalized translations (Video 047)
+### 3.2 Program modules
+#### 3.2.1 - Accounts
+##### 3.2.1.1 - Fiscal Year  (Video 048)
+##### 3.2.1.2 - Currency (Video 049)
+##### 3.2.1.3 - POS Configuration (Video 050)
+##### 3.2.1.4 - Payment methods(Video 051)
+##### 3.2.1.5 - Payment entry (Video 057)
+##### 3.2.1.6 - Taxes (Selling) (Video 053)
+##### 3.2.1.7 - Taxes (Buying) (Video 054)
+##### 3.2.1.8 - Sales Invoice (Video 055)
+##### 3.2.1.9 - Purchase Invoice (Video 056)
+##### 3.2.1.10 -  Conciliation of Payments(Video 057)
+#### 3.2.2 - Human Resources
+##### 3.2.2.1 - Human Resources Configuration (Video 058)
+##### 3.2.2.2 - Holiday List (Video 059)
+##### 3.2.2.3 - Salary structure and components (Video 060)
+##### 3.2.2.4 - Payroll entry (Video 061)
+##### 3.2.2.5 - Payroll entry tool (Video 062)
+##### 3.2.2.6 - Configuring daily work summary (Video 063)
+#### 3.2.3 - Stock
+##### 3.2.3.1 - Units of Measure (Video 064)
+##### 3.2.3.2 - Brands (Video 065)
+##### 3.2.3.3 - Stock configuration (Video 065)
+##### 3.2.3.4 - Price List (Video 066)
+##### 3.2.3.5 - Stock entry (Inventory movements) (Video 067)
+* Initial loading of inventory or stock
+	1. Go to Stock module
+	2. Select Stock entry
+	3. Click on New
+	4. Purpose: Material receipt
+	5. Indicate destination Warehouse
+	6. Enter the name or code of the product, where it says: Item Code
+	7. Indicate the quantity to add or load in the inventory.
+	8. Repeat for each desired product
+	9. If no net rate or value is indicated by ERPNext (Purchase rat eminus sales tax), it will ask for it.
+	10. Click on **Save**, and then **Submit**
+##### 3.2.3.6 - Stock opening entry(Video 068)
+##### 3.2.3.7 - Material request (Video 069)
+##### 3.2.3.8 - Purchase Receipt (Video 070)
+#### 3.2.4 - Buying
+##### 3.2.4.1 - Buying configuration (Video 071)
+##### 3.2.4.2 - Product Bundle(Video 001)
+ Important:  If you changed the default warehouse AFTER having created a product bundle, make sure you refresh or reload the page.
+##### 3.2.4.3 - Buying terms and conditions (Video 072)
+##### 3.2.4.4 - Supplier scorecard (Video 073)
+##### 3.2.4.5 - Supplier qualification criteria (Video 074)
+##### 3.2.4.6 - Supplier qualificaiton variable (Video 075)
+#### 3.2.5 - Selling
+##### 3.2.5.1 - Selling Configuration (Video 076)
+##### 3.2.5.2 - Industry type (Video 077)
+##### 3.2.5.3 - Territory(Video 078)
+##### 3.2.5.4 - Sales Partner(Video 079)
+##### 3.2.5.5 - Sellers (Video 080)
+##### 3.2.5.6 - Product Bundle (Video 001) - Revisited
+##### 3.2.5.7 - Selling terms and conditions (Video 081)
+##### 3.2.5.8 - Selling by means of POS (Video 082)
+#### 3.2.6 - CRM (Customer Resource Management)
+##### 3.2.6.1 - Customer Category (Video 083)
+##### 3.2.6.2 - Communications (Video 084)
+##### 3.2.6.3 - SMS Settings for mobile messaging from ERPNext (Video 085)
+#### 3.2.7 - Manufacturing
+##### 3.2.7.1 - Subcontracting (Video 086)
+##### 3.2.7.2 - Production Order (Video 087)
+##### 3.2.7.3 - Timesheet (Video 088)
+#### 3.2.8 - Projects
+##### 3.2.8.1 - Types of Projects (Video 089)
+##### 3.2.8.2 - Type and Activity Cost (Video 090)
+##### 3.2.8.3 - Project Tasks (Video 091)
+##### 3.2.8.4 - Timesheet (Video 092)
+#### 3.2.9 - Assets
+##### 3.2.9.2 - Asset Maintenance Team (Video 093)
+##### 3.2.9.3 - Asset Maintenance (Video 094)
+##### 3.2.9.4 - Asset Maintenance Log Entry (Video 095)
+##### 3.2.9.5 - Asset Repair (Video 096)
+#### 3.2.10 - Tools
+##### 3.2.10.1 - Tasks(Video 097)
+##### 3.2.10.2 - Files (Video 098)
+##### 3.2.10.3 - Calendar (Video 099)
+##### 3.2.10.4 - Chat (Video 100)
+##### 3.2.10.5 - Note (Video 101)
+##### 3.2.10.6 - Activity (Video 102)
+##### 3.2.10.7 - E-mail group (Video 103) 
+##### 3.2.10.8 - Newsletter (Video 104)
+#### 3.2.11 - Web Site
+##### 3.2.11.1 - Web Site Configuration (Video 105)
+##### 3.2.11.2 - Company Information Configuration (Video 106)
+##### 3.2.11.3 - Contact Configuration (Video 107)
+##### 3.2.11.4 - Web site Theme (Video 108)
+##### 3.2.11.5 - Portal Configuration (Video 109)
+##### 3.2.11.6 - Main Page (Video 110)
+##### 3.2.11.7 - Blog Configuration (Video 111)
+##### 3.2.11.8 - Blog Entry (Video 112)
+### 3.3 Module 3 Conclusion
 [pending]
 TK #Pending a procedure writeup
 1.5.2 - Remote server installation
