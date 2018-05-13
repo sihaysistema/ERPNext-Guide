@@ -506,30 +506,70 @@ What to expect
 ##### 5.2.5.10 - Customer Credit Balance (Video 239)
 ##### 5.2.5.11 - Custom Reports for Selling (Video 240)
 #### 5.2.6 - CRM (Customer Resource Management)
-##### 5.2.6.1 - Detalle de iniciativas (REPETIDO EN VENTAS) (Video 241)
-##### 5.2.6.2 - "Embudo" de ventas (Video 242)
-##### 5.2.6.3 - Prospectos comprometidos pero no convertidos (Video 243)
-##### 5.2.6.4 - Minutos hasta la primera respuesta para Oportunidades (Video 244)
-##### 5.2.6.5 - Clientes Inactivos (repetido en ventas) (Video 245)
-##### 5.2.6.6 - Eficiencia de la campaña (Video 246)
-##### 5.2.6.7 - Eficiencia del propietario de la iniciativa (Video 247)
-#### 5.2.9 - Bienes o Activos
-##### 5.2.9.1 - Movimiento de activo (Video 248)
-##### 5.2.9.2 - Depreciaciones de Activos y Saldos (Video 249)
-#### 5.2.10 - Modificando el programa desde la base
-##### 5.2.10.1 - Accesando linea de comandos - linux (Video 250)
-##### 5.2.10.2 - Terminal iTerm (Video 251)
-##### 5.2.10.3 - Haciendo snapshots (VirtualBox, u otras opciones) (Video 252)
-##### 5.2.10.4 - El folder de ERPNext (Video 253)
-##### 5.2.10.5 - Modificando Archivos (Video 254)
-##### 5.2.10.6 - Modificando Informes - Query report (ej. Agregar columnas) (Video 255)
-##### 5.2.10.7 - GitHub y Versiones de control (Video 256)
-##### 5.2.10.8 - Modo desarrollador y consola desarrollo navegador (Video 257)
-##### 5.2.10.9 - Creando informes - Pages  (Ej. Sales Analytics, vs. Sales Analytics 2.0) (Video 258)
-Que vimos aquí
+##### 5.2.6.1 - Lead Details (Also seen in Selling) (Video 241)
+##### 5.2.6.2 - Sales Funnel (Video 242)
+##### 5.2.6.3 - Prospects Engaged But Not Converted (Video 243)
+##### 5.2.6.4 - Minutes To First Response for Opportunity (Video 244)
+##### 5.2.6.5 - Inactive Customers (Video 245)
+##### 5.2.6.6 - Campaign Efficiency (Video 246)
+##### 5.2.6.7 - Lead Owner Efficiency (Video 247)
+#### 5.2.9 - Assets
+##### 5.2.9.1 - Asset Movement Tool (Video 248)
+##### 5.2.9.2 - Asset Depreciation Ledger (NO VIDEO NUMBER ASSIGNED)
+#### 5.2.10 - Maintaining the Software
+##### 5.2.10.1 - Accesing the Command Line (Video 250)
+##### 5.2.10.2 - Terminal and/or iTerm (Video 251)
+##### 5.2.10.3 - Creating snapshots (VirtualBox, or otther options) (Video 252)
+##### 5.2.10.4 - Remote Server Installation NO ASSIGNED VIDEO
+##### 5.2.10.5 - Setting up SSL with Let's Encrypt NO ASSIGNED VIDEO
+##### 5.2.10.6 - The ERPNext folder: Frappe-Bench (Video 253)
+##### 5.2.10.7 - Updating the Application NO ASSIGNED VIDEO
+##### 5.2.10.8 - GitHub y Versiones de control (Video 256)
+##### 5.2.10.9 - Modo desarrollador y consola desarrollo del navegador (Video 257)
+
+### 5.3 Module 5 Conclusion
+
+## Module 6: Manufacturing (Missing or advanced topics)
+These topics have been reviewed, but perhaps a couple of example videos explaining an entire workflow or more advanced concepts or cases.
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/manufacturing)
+
+## Module 7: Services (Missing or advanced topics)
+These topics have been reviewed, but perhaps a couple of example videos explaining an entire workflow or more advanced concepts or cases.
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/projects)
+
+## Modulo 8: Point of Sale
+## 8.1 - POS
+### 8.1.1 - How it works
+### 8.1.2 - Configuring POS
+### 8.1.3 - How to make a POS sale
+### 8.1.4 - Using without Internet access - Local data storage
+
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/accounts/point-of-sale-pos-invoice)
+
+## Module 9: Stock Module Additional Topics
+## 9.1 - Stock and Distribution topics
+### 9.1.1 - Purchase returns
+### 9.1.2 - Sale return
+### 9.1.3 - Sample Inventories
+
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/stock)
+
+## Module 10: Education
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/education)
+
+## Module 11: Agriculture
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/agriculture)
+
+## Module 12: Healthcare
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/healthcare)
+
+
+# WORK IN PROGRESS BELOW DISREGARD
 
 
 
-[pending]
-TK #Pending a procedure writeup
-1.5.2 - Remote server installation
+
+#### 5.2.10 - Modifying the Software from the base
+##### 5.2.10.5 - Modifying Files (Video 254)
+##### 5.2.10.6 - Modifying Reports  - Query report (Adding Columns) (Video 255)
+##### 5.2.10.9 - Creating reports - Pages  (Ex. Sales Analytics, vs. Sales Analytics 2.0) (Video 258)
