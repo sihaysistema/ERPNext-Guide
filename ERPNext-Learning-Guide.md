@@ -561,15 +561,87 @@ Refer to [original documentation to verify nothing is missing](https://erpnext.o
 Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/agriculture)
 
 ## Module 12: Healthcare
+### 2.1 - Configuration and Setup
+### 2.2 - Patient
+### 2.3 - Patient Appointment
+### 2.4 - Vital Signs
+### 2.5 - Consultation
+### 2.6 - Patient Medical Record
+### 2.7 - Sample Collection
+### 2.8 - Laboratory Test
+### 2.9 - Invoicing
+### 2.10 - Physician
+### 2.11 - Physician Schedule
+### 2.12 - Medical Code Standards
+
 Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/healthcare)
 
+## Modulo 13: Non Profits
+### 13.1 - Membership
+### 13.2 - Chapter
+### 13.3 - Volunteer
+### 13.4 - Donor
+### 13.5 - Grant Application
 
-# WORK IN PROGRESS BELOW DISREGARD
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/non_profit)
 
+## Module 14: Hospitality
+### 14.1 - Restaurant
+### 14.2 - Restaurant Menu
+### 14.3 - Restaurant Reservations
+### 14.4 - Restaurant Order Entry
+### 14.5 - Hotel Room
 
+Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/hospitality)
 
+## Module 15: Contributing and Programming
+### 15.1 - Contributing Translations
+#### 15.1.1 - Access to the portal
+#### 15.1.2 - Adding an unlisted language
+#### 15.1.3 - Accesing the portal
+#### 15.1.4 - Distributing the work: Print the messages for field interviews
+#### 15.1.5 - Field notes, interviewing native speakers
+### 15.2 - Contrubting regional chart of accounts
+### 15.3 - Contributing ideas or improvement suggestions
+### 15.4 - Contributing error logs
+### 15.5 - Developing Apps
+#### 15.5.1 - Before developing
+	Check the forums to verify if there is a project already underway addressing the issue that you have.
+	Ideally you may participate in this project.
+#### 15.5.2 - Developing apps
+##### 15.5.2.1 - How to create an application
+##### 15.5.2.2 - How to use GitHub
+##### 15.5.2.3 - Creating a development server instance
+##### 15.5.2.4 - Planning your app
+##### 15.5.2.5 - Creating your app
+##### 15.5.2.6 - Programming with Python
+##### 15.5.2.7 - Programming with JavaScript
+##### 15.5.2.8 - Modifying Files (Video 254)
+##### 15.5.2.9  - Modificando Reports - Query report (Example: Adding columns) (Video 255)
+##### 15.5.2.10 - Creating Reports - Pages  (Example: Sales Analytics, vs. Sales Analytics 2.0) (Video 258)
+##### 15.5.2.11 - Testing
+##### 15.5.2.12 - Creating Documentation
+##### 15.5.2.13 - Publishing your Application
+##### 15.5.2.14 - Application Maintenance
+#### 15.5.3 - Developing ERPNext core
+##### 15.5.3.1 - How to work with GitHub for contribution to core
+##### 15.5.3.2 - Sending a Pull Request
 
-#### 5.2.10 - Modifying the Software from the base
-##### 5.2.10.5 - Modifying Files (Video 254)
-##### 5.2.10.6 - Modifying Reports  - Query report (Adding Columns) (Video 255)
-##### 5.2.10.9 - Creating reports - Pages  (Ex. Sales Analytics, vs. Sales Analytics 2.0) (Video 258)
+## Module 16: ERPNext Hub
+## Module 17: Calendar and Contacts
+## Module 18: Account Consolidation for parent, child, sister companies
+## Module 19: [*Reserved*] SHS Application (Revelare)
+SHS made application, currently in alpha (may 2018) with the objective to contribute this to ERPNext core
+## Module 20: [*Reserved*] SHS Application (GEV)
+SHS made application, currently in alpha (may 2018) with the objective to contribute this to ERPNext core
+## Module 21: [*Reserved*] SHS Application (Facelec)
+SHS made application, currently in Version 2.1.1 (may 2018). Regionalized application for generating electronic invoices in Guatemala
+## Module 22: [*Reserved*] SHS Application (Accesos Bancarios)
+SHS made application, currently in planning phase (may 2018). Regionalized application for:
+
+* Accessing bank records
+* Programming payments
+* Authorizing payments
+* Supplementing existing conciliation programming in ERPNext
+
+# THIS DOCUMENT IS A WORK IN PROGRESS!
