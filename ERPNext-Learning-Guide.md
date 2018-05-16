@@ -250,6 +250,9 @@ The WebSite module allowed us to create a simple webpage to serve to all users a
 ##### 3.2.1.6 - Taxes (Selling) (Video 053)
 ##### 3.2.1.7 - Taxes (Buying) (Video 054)
 ##### 3.2.1.8 - Sales Invoice (Video 055)
+Discounts:  If you apply a percentage discount over the Grand Total, the total will be:
+(Sum of itm x qty - Sales tax (included)) - ((Sum of itm x qty - Sales tax (included)) * % Discount)
+
 ##### 3.2.1.9 - Purchase Invoice (Video 056)
 ##### 3.2.1.10 -  Conciliation of Payments(Video 057)
 #### 3.2.2 - Human Resources
@@ -611,7 +614,196 @@ Refer to [original documentation to verify nothing is missing](https://erpnext.o
 #### 15.5.2 - Developing apps
 ##### 15.5.2.1 - How to create an application
 ##### 15.5.2.2 - How to use GitHub
-##### 15.5.2.3 - Creating a development server instance
+##### 15.5.2.3 - Creating a development server instance from scratch using VirtualBox
+* These steps will lead you through setting up a Virtual Machine with a Linux .iso until you have a working ERPNext server for local use
+	* These instructions are based on what has worked for us.
+	* This setup is only recommended for a server that will be used locally!
+###### 15.5.2.3.1 - Download and install VirtualBox
+1. Visit https://www.virtualbox.org/
+2. Click the big blue button: "Download Virtual Box 5.x"
+3. Select your operating system.
+4. Install VirtualBox
+5. Corra VirtualBox
+###### 15.5.2.3.2 - Download Linux
+I personally like to run my development servers in Linux Server. You might also wish to use [Ubuntu Desktop](http://releases.ubuntu.com/16.04/ubuntu-16.04.4-desktop-amd64.iso.torrent).
+To avoid compatibility issues I recommend [64-bit Ubuntu 16.04 LTS server](http://releases.ubuntu.com/16.04/ubuntu-16.04.4-server-amd64.iso.torrent).
+Visit the [Ubuntu page](https://www.ubuntu.com/download) to select the proper version for your needs.
+I suggest you use a torrent manager, you will get very fast downloads. I personally use [μTorrent](http://www.utorrent.com/)
+and on a 10Mb connection I get it downloaded in under 15 minutes.
+
+1. Go to the [Ubuntu page](https://www.ubuntu.com/download) to select the proper version for your needs
+2. Once you have selected what you need, you click on it to begin the download
+3. The download will be a **.torrent** file.
+4. If you double click on it or open your torrent manager, you will be able to add it to the torrent list
+5. Make sure you start the torrent and let it seed some time after downloading
+6. The result will be a **.iso** file which will be used to setup our Development server
+###### 15.5.2.3.3 - Create a Virtual Machine
+1. Open VirtualBox
+2. The first time you run, a welcome screen will show
+3. Click on **New** in the menu bar.
+	* Name: **ERPNext-dev** or similar
+	* Type: **Linux**
+	* Version: **Ubuntu (64-bit)**
+4. Click **Continue**
+5. Configure the memory size. Ideally, **1024MB**
+6. Click **Continue**
+7. You will be asked to create a virtual Hard Disk, select **Create a virtual hard disk now**
+	* The size will be suggested, but at least **8-10GB** should suffice.
+8. Click **Create**
+9. You will be prompted to select the file type for the virtual hard disk image.
+	* **VirtualBox Disk Image** will be selected for you, if not, choose it
+10. If you do not mind the space needed for the disk, select **Dynamically Allocated**
+	* I use **Fixed Size**
+11. You will be prompted for the name of the virtual hard disk file
+	* I use: **ERPNext-dev-[description]**
+12. Click on Create
+13. A new disk will be created, and the appliance added to the left bar of VirtualBox.
+###### 15.5.2.3.4 - Configure your Virtual Machine
+1. Configure the Virtual Machine's networking by right clicking on it and selecting **Settings**
+	* On the Network tab, under Adapter 1, select **Bridged Adapter**
+	* Choose your current networking device (ideally, wehre the virtual machine can get an IP assigned by DHCP)
+	* Click **OK**
+2. Right click on Virtual Machine and select **Settings** again.
+	* Select the **Storage** tab
+	* Where it says **Controller: IDE** there is an **Empty** item with a CD icon. Click it.
+	* On the right pane, under **Attributes** you will see a field called **Optical Drive**. Click on the **CD Icon** beside it.
+	* A menu item will pop up, and one of them will say:  **Choose Virtual Optical Disk File**. Click on it.
+	* Navigate to the folder where you downloaded the **.iso** file for Ubuntu and select it.
+	* Click **Open**
+	* You should now see the file oyu just choose under the **Controller IDE item**
+	* Click **OK**
+###### 15.5.2.3.5 - Start your Virtual Machine and install Linux
+1. Select the Virtual Machine and click **Start**
+2. A Linux startup welcome screen will pop up asking for your default language. Use arrows to choose your language. Press **ENTER** to confirm.
+3. Select **Install Ubuntu Server** and press **ENTER**
+4. Select the language for installation and for the default system. Select using arrow keys and press **ENTER**
+5. Select your location and press **ENTER**
+6.  Detect keyboard layout. Follow prompts and press **ENTER** when done. I usually end up with a "latam" auto-detected selection.
+7. Now it will proceed to install and then detect some hardware.
+8. It will ask for the hostname: **ERPNext-dev** or similar is fine. Press **ENTER**
+9. It will ask for a user name: **James Bond** (or your choice). Press **ENTER**
+10. It will ask for a user name for your account: **james** (or your choice) Press **ENTER**
+11. It will ask for a password: **moneypenny** (or your choice) Press **ENTER**
+12. It will ask you to re-enter the password to confirm: **moneypenny** (or your choice above) Press **ENTER**
+13. It asks for encryption of home directory. Since this is *just* a simple development server, I answer **NO** here. Press **ENTER**
+14. Confirm your time zone. Press **ENTER**
+15. Partition the disk and configure LVM
+	* Guided - use entire disk and set up LVM
+	* Select the disk displayed automatically on screen and press **ENTER**
+	* Select **YES** and Press **ENTER**
+	* Select **Continue** and Press **ENTER**
+	* Select **YES** and Press **ENTER**
+16. Installation will run.
+17. It will ask for a Proxy configuration if necessary. Highlight **Continue** with *TAB* and Press **ENTER**
+18. It will ask you for automatic updates. I usually select **Install Security Updates Automatically**
+18. It will ask for installation of some software packages, here I select:
+	* **Samba file server** -  to access the files on my local network and work with my favorite editing software.
+	* **Standard system utilities**
+	* **OpenSSH** - to connect to the server from other machines in the network and run terminal commands
+	* Press *TAB* to highlight **Continue** and Press **ENTER**
+19. It will ask to setup GRUB boot loader. Choose **YES**. Press **ENTER**
+20. When complete, it will show a message and you can highlight **Continue** and Press **ENTER
+###### 15.5.2.3.5 - Configure Linux Server for root user and SSH access
+1. Set root password
+	You will be prompted for the password for your user that you entered during installation. Then enter the root password twice to confirm.
+> ```sudo passwd root```
+
+2. Enable root user
+> ```sudo passwd -u root```
+
+	* to disable in the future:
+
+> ```sudo passwd -l root```
+3. Switch to the root user
+> ```su root```
+4. Open the sshd_config file to setup SSH connections
+
+> ```nano /etc/ssh/sshd_config```
+
+5. Modify the following in the sshd_config file:
+	* Remove the "#" before the **PermitRootLogin** switch and add a **yes** at the end of that line.
+	*PermitRootLogin yes*
+	* Add a no where it says: **RSAAuthentication yes** so it says: **RSAAuthentication no**
+	* Add a no where it says: **PubkeyAuthentication yes** so it says: **PubkeyAuthentication no**
+	* Add a yes and remove the "#" where it says: **PasswordAuthentication yes**
+	* Press **CTRL + X**, **Y** and **ENTER**
+>	NOTE: These settings are for a development server on your local network, never use these settings in a production server!
+6. Restart the OpenSSH server to make changes active, by typing in the console
+> ```service ssh restart```
+or 
+> ```sudo systemctl restart sshd.service```
+
+7. Find your machine's IP Address by typing:
+> ```ifconfig```
+	* Where it says inet addr:xxx.xxx.xxx.xxx
+
+8. Try connecting vía a network machine or your local host (the machine hosting the virtual machine) terminal using SSH
+
+> ```ssh root@[ip_address_of_your_vm]```
+
+###### 15.5.2.3.6 - Configure Linux Server Samba file sharing
+1. Add users, primarily the root user
+> ```smbpasswd -a root```
+2. Configure the server by modifying the .conf file
+> ```nano /etc/samba/smb.conf```
+3. When open, scroll down to the shares definition section, close to **[printers]** section, and add these lines:
+>
+	[ERPNext-root]
+	path = /
+	valid users = root
+	force user = root
+	read only = no
+	create mask = 0755
+	guest ok = yes
+4. Exit and Save with **CTRL + X**, **Y** and **ENTER**
+5. While we are at this, we might as well make sure the hostname is properly configured, so that
+	it will be properly announced on the network when being setup, regardless of the IP.
+> ```nano /etc/hostname```	
+
+Make sure the file has at least one line with the hostname you desire, less than 15 characters in length.
+
+6. Exit and Save with **CTRL + X**, **Y** and **ENTER**
+7. Restart your Samba server:
+> ```service smbd restart```	
+8. Test your configuration
+> ```testparm```
+9. Reboot the server to have the hostname announced on the local network, using:
+> ```reboot```
+
+>**DON'T Forget to snapshot at this point.
+This will enable you to browse the files on any network computer and modify them.  I have a development
+server setup separately and work from other computers in the network.
+###### 15.5.2.3.6 - Install ERPNext
+1. First, you will need to switch to the sudo user you configured during linux installation
+> IMPORTANT!  ERPNext installation will fail if you install as root
+> ```su james```
+
+2. Make sure Python and some features of it are installed.
+> ```sudo apt-get update```
+
+> ```sudo apt-get install python-minimal && sudo apt-get install build-essential python-setuptools```
+2. Now, change to the /home directory
+> ```cd /home```
+3. Download the installation script for Frappe /ERPNext
+> ```sudo wget https://raw.githubusercontent.com/frappe/bench/master/playbooks/install.py```
+4. Here, you might opt to install either the production or the development version.
+	This choice is up to you, but I have found my workflow progresses faster working with a
+	master Production instance of ERPNext. For ERPNext core features, a develop server is best.
+>```sudo python install.py --production```
+5. During installation you will be prompted for a Database password for root, and an Administrator password.
+6. When successful and done, a message will show:
+> Frappe/ERPNext has been successfully installed!
+###### 15.5.2.3.7 - Configuring your bash profile
+1. To make maintenance easier, you can configure a profile file to take you directly to the frappe-bench directory
+> ```sudo nano ~/.bash_profile```	
+2. Add the following line:
+> ```cd /home/frappe/frappe-bench/```
+3. Exit and Save with **CTRL + X**, **Y** and **ENTER**
+###### 15.5.2.3.7 - Starting Bench and ERPNext
+1. On the command line, once installed, you might have to start the frappe-bench.
+> ```cd /home/frappe/frappe-bench/```	
+2. Run the start command
+> ```bench start```
 ##### 15.5.2.4 - Planning your app
 ##### 15.5.2.5 - Creating your app
 Before you create your app, open [this page](https://octicons.github.com/) in your web browser and find out the name of the icon
@@ -656,6 +848,10 @@ Example:
 Example:
 
 > ```bench --site site1.local install-app my-new-app```
+
+* Note: Currently, the app is installed, but no icon will show on the ERPNext desktop
+	in the web browser until you create the first DocType!
+
 5. Create your fist DocType
 	* Open your web browser and type the server address where ERPNext is hosted.
 	* Login
@@ -668,10 +864,7 @@ Example:
 		* Name: **Configuration**
 	* Click on **Save**
 	
-		* Note: Currently, the app is installed, but no icon will show on the ERPNext desktop
-	in the web browser until you create the first DocType!
-	
-5. Enable developer mode in the terminal
+6. Enable developer mode in the terminal
 
 > ```cd /home/frappe/frappe-bench/sites/[your_site_name]```
 
@@ -685,13 +878,13 @@ Add the following line:
 
 Now, exit Save and confirm: **CTRL + X, Y, ENTER**
 
-6. Find your app in the linux directories:
+7. Find your app in the linux directories:
 To modify your application, you can access the directory where the app files in the following
 folder, and select the files, modify them, etc.
 
 > ```cd /home/frappe/frappe-bench/apps/[name_of_your_app]```
 
-7. Optional: Configure your application folder for tracking changes with GitHub
+8. Optional: Configure your application folder for tracking changes with GitHub
 Once inside the directory, run the following commands:
 
 > ```git init```
@@ -699,17 +892,17 @@ Once inside the directory, run the following commands:
 It will confirm, if successful, with:
 **Initialized empty Git repository in /home/frappe/frappe-bench/apps/[name_of_your_app]/.git/**
 
-8. Add files to the local git repository
+9. Add files to the local git repository
 This will add all the files currently in your folder, to the local git repository
 
 > ```git add .```
 
-9. Now, commit your changes
+10. Now, commit your changes
 This prepares the changes and places them in the staging area from where they will be pushed.
 
 > ```git commit -m "[Add a short memo of your choice here]"```
 
-10. Only once: If you [haven't done so](https://help.github.com/articles/create-a-repo/), go to your remote repository on GitHub or other server, and 
+11. Only once: If you [haven't done so](https://help.github.com/articles/create-a-repo/), go to your remote repository on GitHub or other server, and 
 	click on the copy link button on the top right of the repository.
 	
 > ```git remote add origin [URL_that_you_copied]```
@@ -722,7 +915,7 @@ You should get:
 
 > origin  https://github.com/user/repo.git (push)
 
-11. Finally, push your changes onto the remote repository
+12. Finally, push your changes onto the remote repository
 
 **Important: The following command assumes you have nothing in the remote repository yet!**
 > ```git push -u origin master --force```
