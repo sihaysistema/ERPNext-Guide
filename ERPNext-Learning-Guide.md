@@ -244,7 +244,7 @@ The WebSite module allowed us to create a simple webpage to serve to all users a
 #### 3.2.1 - Accounts
 ##### 3.2.1.1 - Fiscal Year  (Video 048)
 ##### 3.2.1.2 - Currency (Video 049)
-##### 3.2.1.3 - POS Configuration (Video 050)
+##### 3.2.1.3 - POS Configuration (Video 050) - [original video](https://youtu.be/4WkelWkbP_c)
 ##### 3.2.1.4 - Payment methods(Video 051)
 ##### 3.2.1.5 - Payment entry (Video 057)
 ##### 3.2.1.6 - Taxes (Selling) (Video 053)
@@ -253,6 +253,8 @@ The WebSite module allowed us to create a simple webpage to serve to all users a
 Discounts:  If you apply a percentage discount over the Grand Total, the total will be:
 (Sum of itm x qty - Sales tax (included)) - ((Sum of itm x qty - Sales tax (included)) * % Discount)
 
+If you apply a total discount amount over the Grand Total, the total will be:
+(Sum of itm x qty - Sales tax (included)) - (Discount Amount)
 ##### 3.2.1.9 - Purchase Invoice (Video 056)
 ##### 3.2.1.10 -  Conciliation of Payments(Video 057)
 #### 3.2.2 - Human Resources
@@ -348,6 +350,131 @@ What we will see here
 ##### 4.1.3.4 - Education Module (Video 116)
 ##### 4.1.3.6 - Services Module (Video 117)
 ##### 4.1.3.7 - Manufacture Module (Video 118)
+##### 4.1.3.8 - Shopify Module NO VIDEO [ERPNext Shopify webinar](https://youtu.be/sd2p-0jATzc) 
+With this integration to ERPNext:
+* Whenever you add an **Item** or **Customer** to a Shopify Account, it synchronizes with ERPNext automatically adding the item or customer.
+* If you add a new **Item** or **Customer** in ERPNext account, item should upload automatically to Shopify.
+* You can manually force the synchronization of **Items** or **Customers**.
+* You can receive orders from shopify Customers directly in ERPNext.
+Requirements: Shopify Account, ERPNext server with domain name
+
+###### 4.1.3.8.1 - Pre-configuration steps in ERPNext to make it easier
+1. Create a **Price List** in ERPNext specifically for Shopify **Items**, if desired.
+2. Create a specific **Warehouse** in ERPNext for **Items** sold that will keep track of items available for Shopify sales
+3. Create a specific **Account** where the deposits from Shopify sales will be registered, under short term assets.
+4. Create a specific naming series for shopify *Sales Orders*, if you want to differentiate them from other *Sales Orders*.
+5. Create a specific naming series for shopify *Delivery Notes*, if you want to differentiate them from other *Delivery Notes*.
+6. Create a specific naming series for shopify *Sales Invoice*, if you want to differentiate them from other *Invoices*.
+
+###### 4.1.3.8.2 - Add ERPNext app to your Shopify account
+* On the left sidebar in the Shopify account administration, at the bottom you will see a link for **Apps**.
+* Click on the link to open the Shopify App Store
+* Search for **ERPNext Connector**
+* Click on **Get** to install it on your Shopify account
+	This screen will notify you that ERPNext will have the ability to do the following:
+	* Modify products, variants and collections
+	* Modify customer details and customer groups
+	* Modify orders, transactions and fulfillments
+
+* Click on **Install App**
+* Enter the data required:
+	*Shop Name*: Enter the name of your shop website as provided by Shopify:  [yourstore].shopify.com
+	*ERPNext Site Name*: This is the domain name where you are running ERPNext. Example: testsite.com
+	*ERPNext User Id*: Enter the user ID (email address) of the user that will have access to synchronize.
+	*Password*: The password associated with the ERPNext user indicated above.
+* Click on the **Submit** button.
+* The Shopify website should now show that the ERPNext app under the **Installed apps**
+###### 4.1.3.8.2 - Configure ERPNext to connect to Shopify
+Ideally, the ERPNext server will update automatically to add the Shopify connector app.
+If not, make sure you install the application from **Setup > Applications > Application Installer > ERPNext Shopify**
+
+1. To access the Shopify Settings, type this in the *Awesome Bar* on top: **Shopify settings**
+2. Make sure the box entitled **Enable Shopify** is checked
+3. *App Type*: **Public**
+4. *Shop URL*: Enter the shop name as entered above **[your_store].shopify.com**
+5. *Price List*: Select the default ERPNext Price list
+6. *Warehouse*: Set the warehouse where Items will ship from, to fulfill Shopify orders.
+7. *Cash/Bank Account*: Set the ERPNext account that will keep track of the  deposits fromShopify sales.
+8. *Customer Group*: Although this is automatically set from Shopify, you can set it manually here.
+9. *Sales Order Series*: Set the desired series to automatically generate when a shopify order is sincronized with ERPNext
+10. Map Shopify Tax / Shipping to ERPNext account
+	10.1 Add a row where you will define the Title of the Tax or Shipping charge
+	10.2 In the same row, select the ERPNext account where you want to tally these charges
+	10.3 The **Title** must equal the name of the additional items in the Shopify invoice. ??? TK
+11. *Import Delivery Notes from Shopify on Shipment*: mark if you want to create a delivery note based on
+	items marked as shipped on Shopify.
+	11.1 You must select the **Delivery Note** series you wish for this 
+12. *Import Sales Invoice from Shopify if Payment is marked*: mark if you want to create a *Sales Invoice* automatically
+	if payment is added
+	12.1 You must select the **Sales Invoice** series you wish to use for this.
+###### 4.1.3.8.3 - Synchronize Items from Shopify to ERPNext
+1. From within ERPNext, to synchronize manually go to 
+	**Shopify settings** by entering it on the *Awesome Bar* and click on **Sync Shopify**
+2. A message will pop up stating: 
+	*"Queued for syncing. It may take a few minutes to an hour if this is your first sync."*
+3. On the settings page, a yellow banner will appear letting you know that:
+	*"The Last sync request is queued"*
+	This message will change to 
+	*Last sync request was successful*  when the latest synchronization has finished successfully.
+4. If you press the **Shopify Log** button, you can view all the logs with their title 
+	a confirmation of the status, and the Status wheter is was a *Success* or **Failed*
+5. If you now go to **Stock > Items**, you will see the items synchronized from Shopify.
+	Each item will be identified by the **Shopify Product ID**, and will also have the Shopify
+	characteristics such as Description, Image, etc.
+###### 4.1.3.8.4 - Synchronize Items from ERPNext to Shopify
+1. Go to **Stock > Items** and open each item you want to Synchronize to Shopify
+2. Each **Item** has a checkbox to **Sync With Shopify**. Make sure you check this box and **Save** the **Item**
+	to confirm the changes.
+3. If you also want to Synchronize the Quantity in your warehouse with Shopify, then check
+	the box **Sync Quantity With Shopify**. Again, **Save** the **Item** to confirm the changes.
+4. Go to **Shopify settings** and click **Sync Shopify** again to push the Items from ERPNext to Shopify.
+5. If you go to your Products page in Shopify, you will see the Items you just synchronized from ERPNext.
+
+###### 4.1.3.8.5 - Synchronizing Customers from Shopify to ERPNext
+1. In **Shopify**, you can add customers that will be synchronized with ERPNext automatically.
+2. In **ERPNext** go to **Shopify settings** and click **Sync Shopify** to synchronize customers.
+3. All the data, including address, will be synchronized to the **Customer** entry in ERPNext.
+###### 4.1.3.8.6 - Synchronizing Customers from ERPNext to Shopify
+To Synchronize a **Customer** from **ERPNext** to **Shopify**:
+
+1. Open the **Customer** document for the desired Customer.
+2. Scroll down to the **More Information** section, and mark the checkbox entitled: **Sync With Shopify**
+3. **Save** the **Customer** to confirm the changes.
+4. Go to **Shopify settings** and click **Sync Shopify** to copy the Customer to Shopify.
+
+###### 4.1.3.8.7 - About Sales Orders
+Orders are synchronized one way only: From Shopify to ERPNext.
+> ERPNext only pulls orders from shopify!
+Your customers "Customer to Business (C2B)" place their orders in **Shopify**.
+Your customers "Business to Business (B2B)" place their orders vía the ERPNext portal and account you provide them.
+Even if you have products on your website, the link for placing an order should lead them to your Shopify shop.
+Once the order has been placed by the customer, the order will synchronize automatically with ERPNext.
+A Sales Order created in ERPNext will not synchronize to **Shopify**. It will only get Sales Orders from **Shopify** to **ERPNext**.
+###### 4.1.3.8.8 - Delivery Notes
+If **Delivery Note** checkbox is selected, ERPNext will synchronize them, and link them to related
+**Sales Orders**, **Sales Invoices** or **Payments** if any.
+Delivery notes will have both the **Shopify Order ID** and **Shopify Fulfillment ID** listed when they synchronize from Shopify.
+Delivery Notes from Shopify synchronization will **always** be in **Draft** status, so that you can edit them and modify them before submitting them.
+A submitted Delivery Note that satisfies the **Sales Order** or **Sales Invoice** means that the order has been fulfilled completely.
+a Delivery Note created primarily in ERPNext, will NOT synchronize to Shopify! It works only from **Shopify** to **ERPNext**.
+###### 4.1.3.8.9- Sales Invoices
+If **Sales Invoice** checkbox is selected, ERPNext will create Sales Invoices.
+These Sales Invoices will be linked to Delivery Notes, Sales Orders and Payments if any.
+If Payment has been received, a linked **Payment Entry** will also be created in ERPNext.
+
+###### 4.1.3.8.10 - Some additional notes
+When Items are synchronized from Shopify, the unique product ID from Shopify is copied to ERPNext
+so that it does not synchronize twice to Shopify from ERPNext in the next synchronization.
+Price List is also updated when synchronized from Shopify.
+
+The Shopify application has a scheduler setup that will synchronize with Shopify frequently (exact timeframe?)
+
+Pending questions to be answered: 
+What happens with VAT if included in price with Shopify?
+How do we process a return from a customer:
+1. With refund?
+2. Without refund?
+
 #### 4.1.2 - Data Backups (Video 119)
 #### 4.1.3 - Form Customization (Video 120)
 	A best practice to use here is to prepend the name of your company to field names (A good practice to prevent errors when updating. You can always copy data from one field to another (column) using mariadb commands later)
