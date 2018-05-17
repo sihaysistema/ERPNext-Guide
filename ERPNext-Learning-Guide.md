@@ -120,61 +120,59 @@ The rest of the module will be an initial exploration of the program modules for
 6. Press **Sign In** or type **ENTER**
 7. Ready, your ERPNext desk is shown
 #### 2.1.2 Configure your user (Video 003)
-##### 2.1.2.1 - Cambie su contraseña
-1. Desde el escritorio, haga clic arriba a la derecha en la imagen de su usuario
-	para mostrar un menú desplegable.
-2. Haga clic en **Mi Configuracion** o **My Settings**
-3. En la página que surge, desplácese hacia abajo en la ventana y en la sección de
-	**Cambiar Contraseña** haga clic para desplegar y mostrar el campo donde puede ingresar una nueva contraseña
-4. Ingrese contraseña nueva
-5. Seleccione o no las opciones de:
-	5.1 Enviar notificacion de cambio de contraseña
-	5.2 Salga de todos los dispositivos mientras cambia la contraseña
-6. Desplácese hacia arriba y haga clic en **Guardar**
+##### 2.1.2.1 - Change your password
+1. From the desktop, click on the top right of the screen where your user is shown
+	to show a collapsible menu.
+2. Click on **My Settings**
+3. In the page that is loaded, scroll down and in the section
+	**Change Password** click to deploy and show the field where you can enter a new password
+4. Enter your new password
+5. Select (or not) the options to :
+	5.1 Email notification of password change
+	5.2 Logout of all devices while the password is changed.
+6. Scroll back up and click on **Save**
 
-##### 2.1.2.2 - Cambie su idioma
-1. Desde el escritorio, haga clic arriba a la derecha en la imagen de su usuario
-	para mostrar un menú desplegable.
-2. Haga clic en **Mi Configuracion** o **My Settings**
-3. En el campo de *Idioma* o *Language*, desplácese para seleccionar
-4. Seleccione uno
-5. Desplácese hacia arriba
-6. Desplácese hacia arriba y haga clic en **Guardar**
+##### 2.1.2.2 - Change your language
+1. From the desktop, click on the top right of the screen where your user is shown
+	to show a collapsible menu.
+2. Click on **My Settings**
+3. In the *Language* field, click and scroll to select
+4. Select one language.
+5. Scroll back up and click on **Save**
 
-##### 2.1.2.3 - Agregue mas informacion
-1. Desde el escritorio, haga clic arriba a la derecha en la imagen de su usuario
-	para mostrar un menú desplegable.
-2. Haga clic en **Mi Configuracion** o **My Settings**
-3. Desplácese hacia abajo y haga click en el desplegable de **Más Información**
-4. Agregue un genero
-5. Agregue un telefono
-6. Agregue un movil
-7. Agregue una fecha de nacimiento
-8. Agregue una Ubicacion
-9. Agregue una corta biografia
-10. Seleccione "*Sonidos Silenciados*" si no desea ecuchar los sonidos de confirmación de ERPNext
-11. Desplácese hacia arriba y haga clic en **Guardar**
+##### 2.1.2.3 - Add more information
+1. From the desktop, click on the top right of the screen where your user is shown
+	to show a collapsible menu.
+2. Click on **My Settings**
+3. Scroll down and click on the  **More Information** section to deploy it
+4. Add a gender
+5. Add a telefono
+6. Add a móvil
+7. Add a date of birth
+8. Add a location
+9. Add a short biography
+10. Select "*Mute sounds*" if you do not wish to listen to alert and confirmation sounds in ERPNext
+11. Scroll back up and click on **Save**
 
-##### 2.1.2.4 - Agregue una imagen al fondo de su escritorio
-1. Desde el escritorio, haga clic arriba a la derecha en la imagen de su usuario
-	para mostrar un menú desplegable.
-2. Haga clic en **Mi Configuracion** o **My Settings**
-3. Desplácese hacia abajo y haga click en el desplegable de **Fondo de escritorio**
-	 y haga clic para desplegar.
-4. Haga Clic en **Adjuntar**
-5. Seleccione un archivo de dimensiones deseadas y haga click en **Subir**
-6. Revise el Estilo de fondo, dejandolo pantalla completa
-7. Modifique la imagen, el estilo de fondo hasta estar satisfecho con su imagen de fondo.
+##### 2.1.2.4 - Add a desktop backround image
+1. From the desktop, click on the top right of the screen where your user is shown
+	to show a collapsible menu.
+2. Click on **My Settings**
+3. Scroll down and click on the  **Desktop Background** section to deploy it
+4. Click on **Attach**
+5. Browse and select an image file in .png or .jpg format in desirable dimensions and click **Upload**
+6. Check the background style, leaving it in full screen or tile as necessary.
+7. Modify the image and the background style, until satisfied with your background image.
 
-##### 2.1.2.5 - Retire la imagen de fondo de escritorio
-1. Desde el escritorio, haga clic arriba a la derecha en la imagen de su usuario
-	para mostrar un menú desplegable.
-2. Haga clic en **Mi Configuracion** o **My Settings**
-3. Desplácese hacia abajo y haga click en el desplegable de **Fondo de escritorio**
-	 y haga clic para desplegar.
-4. Haga Clic en la x al lado del nombre del archivo ya adjunto para eliminar el fondo de
-	escritorio.
-##### 2.1.2.0 Configure your desktop icons (Video 004)
+##### 2.1.2.5 - Remove a desktop backround image
+1. From the desktop, click on the top right of the screen where your user is shown
+	to show a collapsible menu.
+2. Click on **My Settings**
+3. Scroll down and click on the  **Desktop Background** section to deploy it
+4. Click on x on the side of the filename attached for the Background image to eliminate it.
+
+##### 2.1.2.6 Configure your desktop icons (Video 004)
+
 ##### 2.1.2.1 Add a user (Video 005)
 #### 2.1.3 Frappe Framework basics (Video 006)
 * Images
