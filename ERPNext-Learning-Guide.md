@@ -111,6 +111,14 @@ The rest of the module will be an initial exploration of the program modules for
 
 ### 2.1 Basic Operation
 #### 2.1.1 How to Login (Video 002)
+1. Open your web browser
+2. Type the IP address or domain name for your ERPNext server in the address bar for your browser.
+3. When the ERPNext access page is loaded, you should see a couple of fields requesting username and password,
+	If you don't, click the link on the top right and select the menu item: "Switch to Desk"
+4. Enter your username
+5. Enter our password
+6. Press **Sign In** or type **ENTER**
+7. Ready, your ERPNext desk is shown
 #### 2.1.2 Configure your user (Video 003)
 ##### 2.1.2.0 Configure your desktop icons (Video 004)
 ##### 2.1.2.1 Add a user (Video 005)
