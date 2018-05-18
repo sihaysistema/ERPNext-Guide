@@ -172,7 +172,18 @@ The rest of the module will be an initial exploration of the program modules for
 4. Click on x on the side of the filename attached for the Background image to eliminate it.
 
 ##### 2.1.2.6 Configure your desktop icons (Video 004)
+1. From the desktop, click on the top right of the screen where your user is shown
+	to show a collapsible menu.
+2. Click on **Set Desktop Icons**
+3. You can choose to change **By User** and your user, or choose all
+4. You can also choose **Select all** and click again to unmark all
+5. Select the modules that you want to show on the desktop
+6. Scroll up and click on **Save**
 
+> To move the icons, click and hold until the icons shake
+	Move the icon to the desired place
+	When done, click on the desk for them to stay fixed again
+> To eliminate an icon, follow the same procedure above, instead click the x to erase them
 ##### 2.1.2.1 Add a user (Video 005)
 #### 2.1.3 Frappe Framework basics (Video 006)
 * Images
