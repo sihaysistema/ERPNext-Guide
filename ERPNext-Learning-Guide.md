@@ -28,6 +28,12 @@ It is also incorporating several domain specific functions for industries such a
 
 ERPNext already has basic documentation, videos and a support group with plenty of community members that can support you on your journey to learn how to use this software.
 
+ERPNext also allows your suppliers and customers to access a portal to maange
+information related to your company, and it also has a web site for e-commerce.
+
+* Supplier and Customer Portal
+* Web site
+* Comercio electronico (e-commerce)
 
 ### 1.2 Structure
 The following course or tutorial is divided into 5 modules, which will enable you to master ERPNext.
@@ -251,7 +257,7 @@ an Item Attribute or a Sales Invoice Item
 ##### 2.2.6.1 - Use of CRM to increase sales and customer service (Video 031)
 ##### 2.2.5.2 - Leads and Opportunities (Video 032)
 ##### 2.2.5.3 - Campaigns (Video 033)
-#### 2.2.7 - Manufacture
+#### 2.2.7 - Manufacturing
 ##### 2.2.7.1 - Bill of Materials (Video 034)
 	For manufacture or subcontracting
 #### 2.2.8 - Projects
@@ -328,6 +334,7 @@ If you apply a total discount amount over the Grand Total, the total will be:
 (Sum of itm x qty - Sales tax (included)) - (Discount Amount)
 ##### 3.2.1.9 - Purchase Invoice (Video 056)
 ##### 3.2.1.10 -  Conciliation of Payments(Video 057)
+##### 3.2.1.11 - Subscriptions NO VIDEO
 #### 3.2.2 - Human Resources
 ##### 3.2.2.1 - Human Resources Configuration (Video 058)
 ##### 3.2.2.2 - Holiday List (Video 059)
@@ -385,7 +392,7 @@ If you apply a total discount amount over the Grand Total, the total will be:
 ##### 3.2.8.1 - Types of Projects (Video 089)
 ##### 3.2.8.2 - Type and Activity Cost (Video 090)
 ##### 3.2.8.3 - Project Tasks (Video 091)
-##### 3.2.8.4 - Timesheet (Video 092)
+##### 3.2.8.4 - Timesheet (Video 092)  [Original video](https://youtu.be/IxY-rSJsA6U)
 #### 3.2.9 - Assets
 ##### 3.2.9.2 - Asset Maintenance Team (Video 093)
 ##### 3.2.9.3 - Asset Maintenance (Video 094)
@@ -420,7 +427,7 @@ What we will see here
 ##### 4.1.3.3 - Healthcare Module (Video 115)
 ##### 4.1.3.4 - Education Module (Video 116)
 ##### 4.1.3.6 - Services Module (Video 117)
-##### 4.1.3.7 - Manufacture Module (Video 118)
+##### 4.1.3.7 - Manufacturing Module (Video 118)
 ##### 4.1.3.8 - Shopify Module NO VIDEO [ERPNext Shopify webinar](https://youtu.be/sd2p-0jATzc) 
 With this integration to ERPNext:
 * Whenever you add an **Item** or **Customer** to a Shopify Account, it synchronizes with ERPNext automatically adding the item or customer.
