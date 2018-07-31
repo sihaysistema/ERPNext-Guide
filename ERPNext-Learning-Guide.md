@@ -267,6 +267,32 @@ an Item Attribute or a Sales Invoice Item
 ##### 2.2.7.1 Creating an asset(Video 037)
 #### 2.2.10 - Web Site
 ##### 2.2.10.1 - Creating a Web Page (Video 038)
+##### 2.2.10.2 - Pasos para crear una pagina web - Basado en conferencia Octubre 2017
+[Rushabh - Frappe Portal, Website + Web Forms + E-commerce](https://www.youtube.com/watch?v=ruJBetD7In0)
+###### 1 - Prepare su sitio si no lo ha hecho
+Lanze su sitio en un servidor remoto si no lo ha habilitado.
+
+###### 2- Planifique su estructura
+En este caso, el sitio ejemplo maneja eventos. 
+Cada evento tiene una imagen, un titulo, una fecha y un boton para reservar.
+Luego hay contenido sobre lo que el evento posee.
+
+Se creara un modulo para eventos publicos en ERPNext.
+Luego se creará un objeto llamado "Evento".
+Para reservar un ticket, crearemos un objeto "Ticket"
+Esto son dos DocTypes que crearemos.
+Finalmente, crearemos una vista web.
+
+Planifique su "tema" del sitio basado en sus colores.
+
+###### 3 - Configur your website
+Let's configure the theme.
+Hay un Standard theme, pero Hagamos uno nuevo.
+**WebSite > Setup > Website Theme >
+
+1. Add the theme name
+2. Make sure the Apply Style checbox is marked
+3. Check if it is a Custom stye
 ### 2.3 Module 2 Conclusion
 
 In this module we have learned the most basic and important aspects of ERPNext.
@@ -335,6 +361,54 @@ If you apply a total discount amount over the Grand Total, the total will be:
 ##### 3.2.1.9 - Purchase Invoice (Video 056)
 ##### 3.2.1.10 -  Conciliation of Payments(Video 057)
 ##### 3.2.1.11 - Subscriptions NO VIDEO
+The subscriptions functionality in ERPNext allows you to create doctypes periodically
+
+You may create subscriptions for documents like:
+
+* Payment Entry
+* Supplier Quotation
+* Purchase Order
+* Purchase Invoice
+* Purchase Receipt
+* Journal Entry
+* Sales Order
+* Sales Invoice
+* Customer Quotation
+* Delivery Notes
+
+The documents will be created automatically, at the indicated time, as *Draft*
+You can indicate if you wish to have them validated automatically upon creation!
+
+Suppose that you must create a purchase invoice for a monthly property rental manually.
+With subscriptions, you can create the first monthly invoice manually, and then enable the subscription
+so that it automatically generates the next month's purchase invoice, on the day of your choosing.
+###### 3.2.1.11.1 - Creating a subcription
+1. To crate a subscription, you must have at least one document of the type you wish to repeat. If you have not done
+	so, prepare the first one manually and save it.
+2. To create the subscription, write this in the empty text box at the top of every ERPNext instance, aka "*Awesome Bar*": **New Subscription**
+3. Enter the reference **DocType** for your subscription
+4. Enter the series and number of the document that you wish to repeat, this is the same as you created in step 1
+5. Select the frequency you wish for the subscription, this can be:
+	* Daily
+	* Weekly
+	* Monthly: You must indicate the specific day of the month when you want it to be created.
+	* Quarterly: You must indicate the specific day of the month in which the quarter ends when you want it to repeat.
+	* Bi-anually
+	* Annual: You must indicate the specific day of the month in which the year ends when you want it to repeat.
+6. Indicate the initial date from where you wish to create the first one in the series.
+7. Indicate the last date or until when you no longer wish more documents to be created automatically.
+	* If the end date is before the next estimated date in the frequency, ERPNext will limit the creaiton of the document.
+8. Indicate if you wish the document to be *Validated* at the moment of creation.
+	* If you wish to automatically invoice a customer, and have automatic sending of sales invoice, check the field to 
+	generate and send the sales invoice automatically.
+9. Indicate if you wish to disable the subscription (even though you do not want to erase it)
+10. Indicate if you wish to be alerted vía email about the creation of the DocType. When selecting the field,
+	you must indicate the following.
+	* E-mail subject: You can use Jinja, for dynamic messages such as "New Sales Invoice #123",
+	where 123 is the actual series number of the created document by the subscription settings.
+	* Email recipients, separated by a new line. You may add as many recipients as you wish.
+	* Print format
+	* Message: The message for the email can be formated with Jinja, so that you can use dynamic numbers, customer names, etc.
 #### 3.2.2 - Human Resources
 ##### 3.2.2.1 - Human Resources Configuration (Video 058)
 ##### 3.2.2.2 - Holiday List (Video 059)
@@ -380,6 +454,17 @@ If you apply a total discount amount over the Grand Total, the total will be:
 ##### 3.2.5.6 - Product Bundle (Video 001) - Revisited
 ##### 3.2.5.7 - Selling terms and conditions (Video 081)
 ##### 3.2.5.8 - Selling by means of POS (Video 082)
+##### 3.2.5.9 - Pricing Rule NO VIDEO
+1. Puedes establecer promociones en las cuales ofrece descuento en la compra de x cantidad de articulos
+2. Para cliente X, el precio de venta debe ser actualizado por y cantidad
+3. Los productos categorizados bajo el Grupo de Articulos especificado tienen el mismo precio de compra o venta.
+4. Los clientes que pertenecen a un grupo especifico de clientes obtienen precio de venta x o un descuento del y %
+5. Los proveedores bajo cierta categoría deben de tener un precio x.
+6. Puedes agregar margen de venta sobre lista de compras
+	6.1 Haga un listado de precios de compra y asegurese de ingresar un precio de compra en ese listado
+	6.2 Haga una regla de precio en la cual indique el codigo del articulo de compra. Indique que es una regla para la venta.
+	6.3 Agregue el margen porcentual que usted desea sobre el producto de compra
+	6.4 Haga su factura de venta y verá el margen aplicado.
 #### 3.2.6 - CRM (Customer Resource Management)
 ##### 3.2.6.1 - Customer Category (Video 083)
 ##### 3.2.6.2 - Communications (Video 084)
@@ -392,7 +477,32 @@ If you apply a total discount amount over the Grand Total, the total will be:
 ##### 3.2.8.1 - Types of Projects (Video 089)
 ##### 3.2.8.2 - Type and Activity Cost (Video 090)
 ##### 3.2.8.3 - Project Tasks (Video 091)
+A task is an allocation of work to be completed before a specific time.
+A task can exist by itself, or it can belong to a project.
+
+If you wish to see how you create a task from a project, follow the instructiones from project.
+
+To make a new Task, go to **Projects > 	Tasks > New**
+Enter the *Subject* or *Title* for the task.
+Select if it belongs to a project, if necessary.
+Enter the foreseen date from Beggining to End
+You may enter the *Expected Time* of the task in hours
+You may enter the progress in *Percentage*
+Indicate the specific details for this task textually.
+
+If this task depends on another, indicate the previous task here
+
+You may also assign or share a task with colleagues on ERPNext.
 ##### 3.2.8.4 - Timesheet (Video 092)  [Original video](https://youtu.be/IxY-rSJsA6U)
+To keep track of the time used in a task, we create a timesheet
+Select activity type
+Indicate start time
+Indicate hours used
+End time is updated.
+Save the record.
+
+In the related task you will be able to see the time spent on this task
+If the task belongs to a project, then the time spent will be updated there.
 #### 3.2.9 - Assets
 ##### 3.2.9.2 - Asset Maintenance Team (Video 093)
 ##### 3.2.9.3 - Asset Maintenance (Video 094)
@@ -425,10 +535,14 @@ What we will see here
 ##### 4.1.3.1 - Agriculture Module (Video 113)
 ##### 4.1.3.2 - Hospitality Module(Video 114)
 ##### 4.1.3.3 - Healthcare Module (Video 115)
+Presentation of the health module, link to module section 12 with details.
 ##### 4.1.3.4 - Education Module (Video 116)
+Presentation of the Education module, link to module section 11 with details.
 ##### 4.1.3.6 - Services Module (Video 117)
+Prepare a video of the workflow or best practices for services.
 ##### 4.1.3.7 - Manufacturing Module (Video 118)
-##### 4.1.3.8 - Shopify Module NO VIDEO [ERPNext Shopify webinar](https://youtu.be/sd2p-0jATzc) 
+Prepare a video of the workflow or best practices for manufacturing.
+##### 4.1.3.8 - Shopify Module (Video 148) [ERPNext Shopify webinar](https://youtu.be/sd2p-0jATzc) 
 With this integration to ERPNext:
 * Whenever you add an **Item** or **Customer** to a Shopify Account, it synchronizes with ERPNext automatically adding the item or customer.
 * If you add a new **Item** or **Customer** in ERPNext account, item should upload automatically to Shopify.
@@ -553,187 +667,206 @@ How do we process a return from a customer:
 1. With refund?
 2. Without refund?
 
-#### 4.1.2 - Data Backups (Video 119)
-#### 4.1.3 - Form Customization (Video 120)
+#### 4.1.2 - Data Backups (Video 149)
+#### 4.1.3 - Form Customization (Video 150)
 	A best practice to use here is to prepend the name of your company to field names (A good practice to prevent errors when updating. You can always copy data from one field to another (column) using mariadb commands later)
 	Adding new fields to main doctypes (Customize)
-#### 4.1.4 - Personalized Fields (Video 121)
+#### 4.1.4 - Personalized Fields (Video 151)
 		A best practice to use here is to prepend the name of your company to field names (A good practice to prevent errors when updating. You can always copy data from one field to another (column) using mariadb commands later)
 		This particular instruction helps with child table doctypes
-#### 4.1.5 - Custom scripts(Video 122)
-#### 4.1.6 - Email notifications (Video 123)
-#### 4.1.7 - Print formats (Video 124)
+#### 4.1.5 - Custom scripts(Video 152)
+#### 4.1.6 - Email notifications (Video 153)
+#### 4.1.7 - Print formats (Video 154)
 	Basic jinja for print templates
 	Examples
-#### 4.1.8 - Print Style (Video 125)
-#### 4.1.9 - Print Format Builder (Video 126)
-### 4.1.10 - Address Format (Video 127)
+#### 4.1.8 - Print Style (Video 155)
+#### 4.1.9 - Print Format Builder (Video 156)
+### 4.1.10 - Address Format (Video 157)
 
 ### 4.2 Program Modules
 #### 4.2.1 - Accounts
-##### 4.2.1.1 - Trial Balance (Video 128)
-##### 4.2.1.2 - Payment request (Video 129)
-##### 4.2.1.3 - Accounts receivable (Video 130)
-##### 4.2.1.4 - Accounts payable (Video 131)
-##### 4.2.1.5 - Bank reconciliation statements (Video 132)
-##### 4.2.1.6 - Bank change summary (Video 133)
-##### 4.2.1.7 - Bank guarantee (Video 134)
-##### 4.2.1.8 - Fiscal rule (Video 135)
-##### 4.2.1.9 - Budget (Video 136)
-##### 4.2.1.10 - Budget Variance (Video 137)
-##### 4.2.1.11 - Monthly Distrubtion  for Budgets (Video 138)
-##### 4.2.1.12 - Period closing (Video 139)
+##### 4.2.1.1 - Trial Balance (Video 158)
+##### 4.2.1.2 - Payment request (Video 159)
+##### 4.2.1.3 - Accounts receivable (Video 160)
+##### 4.2.1.4 - Accounts payable (Video 161)
+##### 4.2.1.5 - Bank reconciliation statements (Video 162)
+##### 4.2.1.6 - Bank change summary (Video 163)
+##### 4.2.1.7 - Bank guarantee (Video 164)
+##### 4.2.1.8 - Fiscal rule (Video 165)
+##### 4.2.1.9 - Budget (Video 166)
+##### 4.2.1.10 - Budget Variance (Video 167)
+##### 4.2.1.11 - Monthly Distrubtion  for Budgets (Video 168)
+##### 4.2.1.12 - Period closing (Video 169)
 #### 4.2.2 - Human Resources
-##### 4.2.2.1 - Attendance (Video 140)
-##### 4.2.2.2 - Employee Attendance Tool (Video 141)
-##### 4.2.2.3 - Upload Attendance (Video 142)
-##### 4.2.2.4 - Leave Application (Video 143)
-##### 4.2.2.5 - Leave type (Video 144)
-##### 4.2.2.6 - Leave Allocation (Video 145)
-##### 4.2.2.7 - Leave Allocation Tool (Video 146)
-##### 4.2.2.8 - Leave Block List (Video 147)
+##### 4.2.2.1 - Attendance (Video 170)
+##### 4.2.2.2 - Employee Attendance Tool (Video 171)
+##### 4.2.2.3 - Upload Attendance (Video 172)
+##### 4.2.2.4 - Leave Application (Video 173)
+##### 4.2.2.5 - Leave type (Video 174)
+##### 4.2.2.6 - Leave Allocation (Video 175)
+##### 4.2.2.7 - Leave Allocation Tool (Video 176)
+##### 4.2.2.8 - Leave Block List (Video 177)
 #### 4.2.3 - Stock
-##### 4.2.3.1 - Product Attributes (Video 148)
-##### 4.2.3.2 - Product Variants (Video 149)
-##### 4.2.3.3 - Stock Reconciliation (Video 150)
-##### 4.2.3.4 -  Packing List (Video 151)
-##### 4.2.3.5 - Series Numbering (Video 152)
-##### 4.2.3.6 - Lot Number (Video 153)
+##### 4.2.3.1 - Product Attributes (Video 178)
+##### 4.2.3.2 - Product Variants (Video 179)
+##### 4.2.3.3 - Stock Reconciliation (Video 180)
+A reconciliation allows you to enter the items that have been physically counted or observed
+in a warehouse on a specific date, and an account to cost or expense the items not found. You
+can also specify the cost center for this particular entry.
+
+Each line lists the item, the warehouse and the amount actually verified in the warehouse.
+ERPNext will then fetch the valuation rate (or you may enter it yourself ?).
+
+Once the DocType has been Validated, it will post corresponding GL Entries and Stock entries.
+
+You can make as many stock reconciliations as necessary.
+##### 4.2.3.4 -  Packing List (Video 181)
+##### 4.2.3.5 - Series Numbering (Video 182)
+##### 4.2.3.6 - Lot Number (Video 183)
 #### 4.2.4 - Buying
-##### 4.2.4.1 - Inviting suppliers to the ERPNext portal  for your Company (Video 154)
-##### 4.2.4.2 - Entering supplier quotation on your ERPNext portal (Video 155)
+##### 4.2.4.1 - Inviting suppliers to the ERPNext portal  for your Company (Video 184)
+When you create a quotation request, you may invite the supplier to your portal to make an offer for the request.
+
+##### 4.2.4.2 - Entering supplier quotation on your ERPNext portal (Video 185)
 #### 4.2.5 - Selling
-##### 4.2.5.1 - Shipping Rule (Video 156)
-##### 4.2.5.2 - Sales Analytics (Video 157)
-##### 4.2.5.3 - Customer loyalty (Video 158)
+##### 4.2.5.1 - Shipping Rule (Video 186)
+##### 4.2.5.2 - Sales Analytics (Video 187)
+##### 4.2.5.3 - Customer loyalty (Video 188)
 #### 4.2.6 - CRM (Customer Resource Management)
-###### 4.2.6.1 - SMS Entry (Video 159)
-###### 4.2.6.2 - SMS Settings (Video 160)
+###### 4.2.6.1 - SMS Entry (Video 189)
+###### 4.2.6.2 - SMS Settings (Video 190)
 ##### 4.2.7 - Manufacturing
-##### 4.2.7.1 - Open Production Orders(Video 161)
-##### 4.2.7.2 - Production Orders in Progress (Video 162)
-##### 4.2.7.3 - Delivered products from Production Orders (Video 163)
-##### 4.2.7.4 - Completed Production Orders (Video 164)
-##### 4.2.7.5 - Production Analysis (Video 165)
+##### 4.2.7.1 - Open Production Orders(Video 191)
+##### 4.2.7.2 - Production Orders in Progress (Video 192)
+##### 4.2.7.3 - Delivered products from Production Orders (Video 193)
+##### 4.2.7.4 - Completed Production Orders (Video 194)
+##### 4.2.7.5 - Production Analysis (Video 195)
 #### 4.2.8 - Projects
-##### 4.2.8.1 - Daily work hour summary (Video 166)
-##### 4.2.8.2 - Precise stock measurement (Video 167)
+##### 4.2.8.1 - Daily work hour summary (Video 196)
+##### 4.2.8.2 - Precise stock measurement (Video 197)
+##### 4.2.8.3 - Gannt chart NO VIDEO
+This report shows the tasks overlayed in a calendar to visualize the required time to complete the task.
+
+You may update the progress of the task (%) form the Gantt chart
+
+Task dependency on another will be shown with an arrow.
+
 #### 4.2.9 - Assets
-##### 4.2.9.1 - Asset movement (Video 168)
-##### 4.2.9.2 - Asset depreciations and pending balance (Video 169)
+##### 4.2.9.1 - Asset movement (Video 198)
+##### 4.2.9.2 - Asset depreciations and pending balance (Video 199)
 ### 4.3 Module 4 Conclusion
 Conclusion and summary of what we saw here.
 
 ## Module 5: Becoming an expert
 What to expect
 ### 5.1 Expert level operation
-#### 5.1.1 Application installer (Video 170)
-#### 5.1.2 Email alerts (Video 171)
-#### 5.1.3 Standardized response (Video 172)
-#### 5.1.4 Feedback trigger (Video 173)
-#### 5.1.5 Email summary (Video 174)
-#### 5.1.6 Account payment vía gateway (Cuenta pasarela de pago) (Video 175)
-#### 5.1.7 - Check printing template (Video 176)
-#### 5.1.8 - Programming advanced invoice templates (Video 177)
+#### 5.1.1 Application installer (Video 200)
+#### 5.1.2 Email alerts (Video 201)
+#### 5.1.3 Standardized response (Video 202)
+#### 5.1.4 Feedback trigger (Video 203)
+#### 5.1.5 Email summary (Video 204)
+#### 5.1.6 Account payment vía gateway (Cuenta pasarela de pago) (Video 205)
+#### 5.1.7 - Check printing template (Video 206)
+#### 5.1.8 - Programming advanced invoice templates (Video 207)
 ### 5.2 Program modules
 #### 5.2.1 - Accounts
-##### 5.2.1.1 - Report Gross profit (Video 178)
-##### 5.2.1.2 - Purchase Invoice Trends (Video 179)
-##### 5.2.1.3 - Sales Invoice Trends (Video 180)
-##### 5.2.1.4 - Trial Balance for Party (Video 181)
-##### 5.2.1.5 - Payment Period Based on Invoice Date (Video 182)
-##### 5.2.1.6 - Sales Partner Comission (Video 183)
-##### 5.2.1.7 - Item-wise Sales Register (Video 184)
-##### 5.2.1.8 - Item-wise Purchase Register (Video 185)
-##### 5.2.1.9 - Accounts Receivable Summary (Video 186)
-##### 5.2.1.10 - Accounts Payable Summary NO VIDEO ASSIGNED
-##### 5.2.1.11 - Sales Payment Summary (Video 187)
-##### 5.2.1.12 - Creating and Saving Personalizados Reports (Video 188)
+##### 5.2.1.1 - Report Gross profit (Video 208)
+##### 5.2.1.2 - Purchase Invoice Trends (Video 209)
+##### 5.2.1.3 - Sales Invoice Trends (Video 210)
+##### 5.2.1.4 - Trial Balance for Party (Video 211)
+##### 5.2.1.5 - Payment Period Based on Invoice Date (Video 212)
+##### 5.2.1.6 - Sales Partner Comission (Video 213)
+##### 5.2.1.7 - Item-wise Sales Register (Video 214)
+##### 5.2.1.8 - Item-wise Purchase Register (Video 215)
+##### 5.2.1.9 - Accounts Receivable Summary (Video 216)
+##### 5.2.1.10 - Accounts Payable Summary (Video 217)
+##### 5.2.1.11 - Sales Payment Summary (Video 218)
+##### 5.2.1.12 - Creating and Saving Personalizados Reports (Video 219)
 #### 5.2.2 - Human Resources
-##### 5.2.2.1 - Appraisal (Video 189)
-##### 5.2.2.2 - Appraisal Template (Video 190)
-##### 5.2.2.3 - Team Updates (Video 191)
-##### 5.2.2.4 - Training Program (Video 192)
-##### 5.2.2.5 - Training Event (Video 193)
-##### 5.2.2.6 - Training Result(Video 194)
-##### 5.2.2.7 - Training Feedback (Video 195)
-##### 5.2.2.8 - Loan Type (Video 196)
-##### 5.2.2.9 - Employee Loan Application (Video 197)
-##### 5.2.2.10 - Employee Loan (Video 198)
-##### 5.2.2.11 - Vehicle
-##### 5.2.2.12 - Vehicle Log
+##### 5.2.2.1 - Appraisal (Video 220)
+##### 5.2.2.2 - Appraisal Template (Video 221)
+##### 5.2.2.3 - Team Updates (Video 222)
+##### 5.2.2.4 - Training Program (Video 223)
+##### 5.2.2.5 - Training Event (Video 224)
+##### 5.2.2.6 - Training Result(Video 225)
+##### 5.2.2.7 - Training Feedback (Video 226)
+##### 5.2.2.8 - Loan Type (Video 227)
+##### 5.2.2.9 - Employee Loan Application (Video 228)
+##### 5.2.2.10 - Employee Loan (Video 229)
+##### 5.2.2.11 - Vehicle (Video 230)
+##### 5.2.2.12 - Vehicle Log (Video 231)
 ##### 5.2.2.13 - Reports
-###### 5.2.2.13.1 - Employee Birthday (Video 199)
-###### 5.2.2.13.2 - Employee Leave Balance (Video 200)
-###### 5.2.2.13.3 - Employees working on a holiday (Video 201)
-###### 5.2.2.13.4 - Employee information (Video 202)
-###### 5.2.2.13.5 - Salary Register (Video 203)
-###### 5.2.2.13.6 - Monthly Attendance Sheet (Video 204)
-###### 5.2.2.13.7 - Vehicle Expenses (Video 205)
+###### 5.2.2.13.1 - Employee Birthday (Video 232)
+###### 5.2.2.13.2 - Employee Leave Balance (Video 233)
+###### 5.2.2.13.3 - Employees working on a holiday (Video 234)
+###### 5.2.2.13.4 - Employee information (Video 235)
+###### 5.2.2.13.5 - Salary Register (Video 236)
+###### 5.2.2.13.6 - Monthly Attendance Sheet (Video 237)
+###### 5.2.2.13.7 - Vehicle Expenses (Video 238)
 #### 5.2.3 - Stock
-##### 5.2.3.1 - Delivery Trip (Video 206)
-##### 5.2.3.2 - Quality Inspection (Video 207)
-##### 5.2.3.3 - Landed Cost Voucher (Video 208)
-##### 5.2.3.4 - Instalation Note (Video 210)
-##### 5.2.3.5 - Serial Number Service Contract Expiry NO VIDEO
-##### 5.2.3.6 - Serial Number Status NO VIDEO
-##### 5.2.3.7 - Serial Number Warranty Expiry NO VIDEO 
+##### 5.2.3.1 - Delivery Trip (Video 239)
+##### 5.2.3.2 - Quality Inspection (Video 240)
+##### 5.2.3.3 - Landed Cost Voucher (Video 241)
+##### 5.2.3.4 - Instalation Note (Video 242)
+##### 5.2.3.5 - Serial Number Service Contract Expiry (Video 243)
+##### 5.2.3.6 - Serial Number Status (Video 244)
+##### 5.2.3.7 - Serial Number Warranty Expiry (Video 245)
 ##### 5.2.3.8 -  Stock Reports
-###### 5.2.3.8.1 - Stock Ledger (Video 211)
-###### 5.2.3.8.2 - Stock Balance (Video 212)
-###### 5.2.3.8.3 - Stock Projected Quantity (Video 213)
-###### 5.2.3.8.4 - Stock Summary (Video 214)
-###### 5.2.3.8.5 - Stock Ageing (Video 215)
-###### 5.2.3.8.5 - Item Price Stock (Video 216)
+###### 5.2.3.8.1 - Stock Ledger (Video 246)
+###### 5.2.3.8.2 - Stock Balance (Video 247)
+###### 5.2.3.8.3 - Stock Projected Quantity (Video 248)
+###### 5.2.3.8.4 - Stock Summary (Video 249)
+###### 5.2.3.8.5 - Stock Ageing (Video 250)
+###### 5.2.3.8.5 - Item Price Stock (Video 251)
 ##### 5.2.3.9 - Additional reports
-###### 5.2.3.9.1 - Ordered Items To Be Delivered (Video 217)
-###### 5.2.3.9.2 - Purchased Order Items To Be Received(Video 218)
-###### 5.2.3.9.3 - Item Shortage Report (Video 219)
-###### 5.2.3.9.4 - Requested Items To Be Transferred (Video 220)
-###### 5.2.3.9.5 - Batch-Wise Balance History (Video 221)
-###### 5.2.3.9.6 - Estado de caducidad de lote de productos (Video 222)
-###### 5.2.3.9.7 - Precios de los productos (Video 223)
-###### 5.2.3.9.8 - Nivel recomendado de reabastecimiento de producto (Video 224)
-###### 5.2.3.9.9 - Detalles de la variante del articulo (Video 225)
+###### 5.2.3.9.1 - Ordered Items To Be Delivered (Video 252)
+###### 5.2.3.9.2 - Purchased Order Items To Be Received(Video 253)
+###### 5.2.3.9.3 - Item Shortage Report (Video 254)
+###### 5.2.3.9.4 - Requested Items To Be Transferred (Video 255)
+###### 5.2.3.9.5 - Batch-Wise Balance History (Video 256)
+###### 5.2.3.9.6 - Estado de caducidad de lote de productos (Video 257)
+###### 5.2.3.9.7 - Precios de los productos (Video 258)
+###### 5.2.3.9.8 - Nivel recomendado de reabastecimiento de producto (Video 259)
+###### 5.2.3.9.9 - Detalles de la variante del articulo (Video 260)
 #### 5.2.4 - Buying
-##### 5.2.4.1 - Items to Be Requested (Video 226)
-##### 5.2.5.2 - Requested Items To Be Ordered (Video 227)
-##### 5.2.5.3 - Material Requests for which Supplier Quotations are not Created (Video 227)
-##### 5.2.5.4 - Item-Wise Purchase History (Video 228)
-##### 5.2.5.5 - Supplier Addresses And Contacts (Video 229)
+##### 5.2.4.1 - Items to Be Requested (Video 261)
+##### 5.2.5.2 - Requested Items To Be Ordered (Video 262)
+##### 5.2.5.3 - Material Requests for which Supplier Quotations are not Created (Video 263)
+##### 5.2.5.4 - Item-Wise Purchase History (Video 264)
+##### 5.2.5.5 - Supplier Addresses And Contacts (Video 265)
 #### 5.2.5 - Selling
-##### 5.2.5.1 - Lead Details (Video 230)
-##### 5.2.5.2 - Customer Addresses and Contacts (Video 231)
-##### 5.2.5.3 - Ordered Items to Be Delivered (Video 232)
-##### 5.2.5.4 - Sales Person-wise Transaction Summary (Video 233)
-##### 5.2.5.5 - Item-Wise Sales History (Video 234)
-##### 5.2.5.6 - Bill Of Materials (BOM) Search (Video 235)
-##### 5.2.5.7 - Inactive Customers (Video 236)
-##### 5.2.5.8 - Available Stock For Packing Items (Video 237)
-##### 5.2.5.9 - Pending SO Items For Purchase Request (Video 238)
-##### 5.2.5.10 - Customer Credit Balance (Video 239)
-##### 5.2.5.11 - Custom Reports for Selling (Video 240)
+##### 5.2.5.1 - Lead Details (Video 266)
+##### 5.2.5.2 - Customer Addresses and Contacts (Video 267)
+##### 5.2.5.3 - Ordered Items to Be Delivered (Video 268)
+##### 5.2.5.4 - Sales Person-wise Transaction Summary (Video 269)
+##### 5.2.5.5 - Item-Wise Sales History (Video 270)
+##### 5.2.5.6 - Bill Of Materials (BOM) Search (Video 271)
+##### 5.2.5.7 - Inactive Customers (Video 272)
+##### 5.2.5.8 - Available Stock For Packing Items (Video 273)
+##### 5.2.5.9 - Pending SO Items For Purchase Request (Video 274)
+##### 5.2.5.10 - Customer Credit Balance (Video 275)
+##### 5.2.5.11 - Custom Reports for Selling (Video 276)
 #### 5.2.6 - CRM (Customer Resource Management)
-##### 5.2.6.1 - Lead Details (Also seen in Selling) (Video 241)
-##### 5.2.6.2 - Sales Funnel (Video 242)
-##### 5.2.6.3 - Prospects Engaged But Not Converted (Video 243)
-##### 5.2.6.4 - Minutes To First Response for Opportunity (Video 244)
-##### 5.2.6.5 - Inactive Customers (Video 245)
-##### 5.2.6.6 - Campaign Efficiency (Video 246)
-##### 5.2.6.7 - Lead Owner Efficiency (Video 247)
+##### 5.2.6.1 - Lead Details (Also seen in Selling) (Video 277)
+##### 5.2.6.2 - Sales Funnel (Video 278)
+##### 5.2.6.3 - Prospects Engaged But Not Converted (Video 279)
+##### 5.2.6.4 - Minutes To First Response for Opportunity (Video 280)
+##### 5.2.6.5 - Inactive Customers (Video 281)
+##### 5.2.6.6 - Campaign Efficiency (Video 282)
+##### 5.2.6.7 - Lead Owner Efficiency (Video 283)
 #### 5.2.9 - Assets
-##### 5.2.9.1 - Asset Movement Tool (Video 248)
-##### 5.2.9.2 - Asset Depreciation Ledger (NO VIDEO NUMBER ASSIGNED)
+##### 5.2.9.1 - Asset Movement Tool (Video 284)
+##### 5.2.9.2 - Asset Depreciation Ledger (Video 285)
 #### 5.2.10 - Maintaining the Software
-##### 5.2.10.1 - Accesing the Command Line (Video 250)
-##### 5.2.10.2 - Terminal and/or iTerm (Video 251)
-##### 5.2.10.3 - Creating snapshots (VirtualBox, or otther options) (Video 252)
-##### 5.2.10.4 - Remote Server Installation NO ASSIGNED VIDEO
-##### 5.2.10.5 - Setting up SSL with Let's Encrypt NO ASSIGNED VIDEO
-##### 5.2.10.6 - The ERPNext folder: Frappe-Bench (Video 253)
-##### 5.2.10.7 - Updating the Application NO ASSIGNED VIDEO
-##### 5.2.10.8 - GitHub y Versiones de control (Video 256)
-##### 5.2.10.9 - Modo desarrollador y consola desarrollo del navegador (Video 257)
+##### 5.2.10.1 - Accesing the Command Line (Video 286)
+##### 5.2.10.2 - Terminal and/or iTerm (Video 287)
+##### 5.2.10.3 - Creating snapshots (VirtualBox, or otther options) (Video 288)
+##### 5.2.10.4 - Remote Server Installation (Video 289)
+##### 5.2.10.5 - Setting up SSL with Let's Encrypt (Video 290)
+##### 5.2.10.6 - The ERPNext folder: Frappe-Bench (Video 291)
+##### 5.2.10.7 - Updating the Application (Video 292)
+##### 5.2.10.8 - GitHub & Version control (Video 293)
+##### 5.2.10.9 - Developer mode and development console on the browser (Video 294)
 
 ### 5.3 Module 5 Conclusion
 
@@ -765,8 +898,62 @@ Refer to [original documentation to verify nothing is missing](https://erpnext.o
 ## Module 10: Education
 Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/education)
 
+### 10.1 - Introduccion - ERPNext for schools - (Video 119)
+https://youtu.be/f6foQOyGzdA
+###10.2 - Student Application - (Video 120)
+https://youtu.be/l8PUACusN3E
+### 10.3 - Students Management - (Video 121)
+https://youtu.be/nIUsbl0rEE0
+### 10.4 - Programs & Courses - (Video 122)
+https://youtu.be/1ueE4seFTp8
+### 10.5 - Program Enrollment - (Video 123)
+https://youtu.be/5nxWYBRHY_o
+### 10.6 - Instructor - (Video 124)
+https://youtu.be/rVqQYS1_02k
+### 10.7 - Student Groups (Sections) - (Video 125)
+Students assigned to a course
+https://youtu.be/5K_smeeE1Q4
+### 10.8 - Course Scheduling - (Video 126) 
+Agenda for each instructor and students
+https://youtu.be/iy-DBV9jI-A
+### 10.9 - Student Attendance - (Video 127)
+https://youtu.be/j9pgkPuyiaI
+### 10.10 - Student Leave Application - (Video 128)
+https://youtu.be/NwwH5t-NKBE
+### 10.11 - Assessment Criteria and Grading - (Video 129)
+https://youtu.be/t8ZDDq4qtIk
+### 10.12 - Assessment Group - (Video 130)
+A group that is assesed, a hierarchy of evaluations done in an academic year.
+https://youtu.be/I1T7Z2JbcP4
+### 10.13 - Assessment Plan - (Video 131)
+Schedules an assessment for a specific groups of students in a specific course.
+https://youtu.be/Q9CzzoYb_Js
+### 10.14 - Assessment Result and Assessment Result Tool - (Video 132)
+The result of the assessments registers the score of the student in a specific evaluation. The assesment result tool, allows you to enter several student results at the same time, based on an assesment plan.
+https://youtu.be/U8ZRB8CM-UM
+### 10.15 - Fee Structure - (Video 133)
+Category for fees and fee accounts ( The fee category is combined to calculate the total to be charged per student. (Monthly fee, yearly subscription fee, etc.)
+https://youtu.be/_ZkvyVnWgYk
+### 10.16 - Registro de Tarifas Masivo - (Video 134)
+Allows you to enter multiple fees for student groups at the same time.
+### 10.17 - Fee and Payment - (Video 135)
+CHow to create a single fee per student. And how to register the payment receipt.
+https://youtu.be/RfWOyjgxIZM
+
 ## Module 11: Agriculture
 Refer to [original documentation to verify nothing is missing](https://erpnext.org/docs/user/manual/en/agriculture)
+
+### 11.1 Introduction to ERPNext for Agriculture
+### 11.2 Production Units and Crop Management
+### 11.3 Agriculture Demonstration
+### 11.4 - Basic Use
+#### 11.4.1 - Land Unit
+#### 11.4.2 - Crop
+#### 11.4.3 - Crop Cycle
+#### 11.4.4 - Agricultural Labor
+
+### 11.5 - Basic configuration of the Agriculture Module
+### 11.5.1 - Location (Land Unit)
 
 ## Module 12: Healthcare
 ### 2.1 - Configuration and Setup
