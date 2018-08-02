@@ -1346,4 +1346,113 @@ SHS made application, currently in planning phase (may 2018). Regionalized appli
 * Authorizing payments
 * Supplementing existing conciliation programming in ERPNext
 
+## Module 23:  [*Reserved*] Pull exchange rate from Bank of Guatemala
+This module pulls the exchange rate published by the National Bank of Guatemala and makes it available to ERPNext, automatically.
+## Module 24: The basics on managing and naming your warehouses
+Basado en el [artículo](https://www.skuvault.com/blog/warehouse-locations-labeling-mistakes) de [Arianna Thayer](https://www.skuvault.com/blog/author/arianna-thayer)
+
+### How to organize your warehouses
+Hablar del orden de su bodega puede ser algo aburrido, puesto que tiene otras cosas más importantes
+que hacer. ¿Para que ordenarlas adecuadamente?
+
+* Reducir tiempo en buscar, obtener y utilizar insumos
+* Minimizar los errores
+* Minimizar desperdicios
+* Cumplir con normativas de certificaciones
+
+La combinación de esto evidentemente resulta en una reducción de costos y mejores ventas,
+ los cuales se trasladan directamente a su operación. Una bodega ordenada hace las tareas más faciles, rápidas y efectivas.
+ Cumplir ocn una certificación ayuda en abrir más mercados.
+
+Entonces, si desea mejorar su operación partamos desde los estándares aceptados para manejo de bodegas.
+Estos estándares surgieron despues de muchas pruebas y errores en otras organizaciones a lo largo del tiempo.
+Conforme el paso del tiempo, se ha llegado a un común acuerdo desde lo informal hasta una formalidad, a lo cual
+se le llama *Estándar de la industria*. Aqui veremos los concéptos básicos que puede aplicar para
+tener excelentes resultados desde el inicio.
+
+Al administrar las ubicaciones de las bodegas adecuadamente, se podrá utilizar herramientas y sistemas
+comúnmente utilizados como: obtención interactiva de objetos por fase ó ubicaciónes dinámicas.
+
+Obtencion Interactiva de Objetos por Fase (OIOF): Interactive Wave Picking, le permite a la persona encargada
+de obtener objetos en bodega, de hacer su ruta eficiente, desglosando el total de articulos que recogerá
+en una sola lista que asegura que solo recorra una vez cada pasillo o estantería.  Si tengo 5 pedidos
+con un total de 20 objetos, algunos de ellos repetidos, el sistema OIOF me desplegará la lista de tal manera que
+pase recogiendo cantidades de objetos a obtener, para cuando retorne a mi punto de partida, ya los asigne a
+los pedidos correspondientes.
+
+https://www.skuvault.com/features/interactive-wavepicking.php
+https://en.wikipedia.org/wiki/Wave_picking
+https://www.skuvault.com/features
+https://en.wikipedia.org/wiki/Warehouse_management_system
+
+Ubicaciónes dinámicas: En un sistema de ubicación dinámica, se permite que la ubicación de los productos
+cambie de posición en las ubicaciones de bodega. Un ejemplo de esto es que los productos más
+comunes puedan ser almacenados mas cercanos a la ubicación donde se empacan o utilizan.
+
+http://microchannel.com.au/company-blog/march-2015/warehouse-management-static-vs-dynamic-slotting
+https://www.youtube.com/watch?v=31GfSd0oIzg
+
+Ambas estructuras mencionadas arriba le permiten reducir el tiempo de obtención de los objetos.
+
+### Terminology
+Previo a sugerirle como nombrar sus bodegas, clarifiquemos la terminología.
+
+**Location**: Un area designada y etiquetada en su bodega, en donde una persona va a obtener los objetos
+para un pedido. Tipicamente se identifica con una serie de codigos alfanumericos (que pueden incluir codificacion en barra) que pueden usarse
+para rápidamente registrar la salida o ingreso de un producto en sus sitema de administración de bodega (almacén)
+
+**Bin**: Es cualquier tipo de almacenamiento *adentro* de uno o mas espacios o ubicaciones para
+el producto almacenado. (Por ejemploi: Un contenedor de clavos, otro de tornillos, etc.). Esta es la ubicación mas específica
+que se sugiere utilizar en una bodega. Ocasionalmente se puede intercambiar con el término **Ubicación**.
+
+**Shelf**: El siguiente nivel de ubicación a la cual se le coloca nombre es el **Entrepaño** o **Fila**.
+Este es el espacio horizontal que atraviesa la enteridad de la Estantería en donde se ubica.
+
+**Rack**: (Also: **Unit** or **Section**) Se refiere a la seccion de unidades o modulos
+que contienen Entrepaños para almacenar los productos. Dependiendo de la bodega, las **Estanterías** se pueden identificar
+como una unidad entera a lo largo de un **Pasillo**, o como secciones de **Entrepaños** largos. Se puede imaginar
+lo descrito como un montón de libreras alineadas en una fila, con cada librera en su propia **Estantería** dentro de
+la fila de **Estanterías**.
+
+**Aisle**: La siguiente forma de indicar ubicación es por **Pasillo**, el cual se
+define como el espacio entre sus **Estanterías** por el cual se puede mover usted o su maquinaria de bodega (Montacargas, etc.)
+
+Si deseamos ver una jerarquía de su bodega, lo lógico es entonces definirla de lo general a lo específico como:
+#### General Location > Warehouse Group > Warehouse > Aisle > Rack > Shelf > Bin
+
+
+### How to name your Warehouses
+Para nombrar su bodega, asegúrese de elejir algo que le funcione, y sea consistente en el esquema que elijió.
+
+Las mejores prácticas para nombrar sus bodegas es la siguiente:
+
+1. Numere los **Entrepaños** del suelo hacia arriba. De esta forma, si necesita agregar 
+	entrepaños, no tiene que volver a etiquetarlos. Por ejemplo, si tiene una **Estantería**
+	con cuatro **Entrepaños**, siendo el superior etiquetado como **#1**, y el de hasta abajo como
+	el **#4**, si desea agregar ubicaciones (**Entrepaños**), su nueva ubicación (supongamos 
+	que es el **Entrepaño #5**) quedaría encima del **Entrepaño #1**. Evidentemente esto le complica todo.
+2. Es recomendable que cuando desee utilizar numeración en las ubicaciones, utilice un 
+	cero en todos los numeros inferiores a diez (Por Ejemplo: 01, 02, 03, etc.).  Esto le permite a su
+	sistema leer las ubicaciones alfanuméricas codificadas en código de barras, correctamente. 
+	Además, le simplifica la lectura a su personal, puesto que se acostumbran a leer dos dígitos siempre.
+3. Sea consistente. Un sistema inconsistente de etiquetado le herá más dificil el trabajo a sus empleados.
+
+Debido a que la variedad de productos que se almacenan es muy cambiante, en algunos casos se necesita
+mucho detalle, y en otros se necesita menos detalle (Ej. Bodega que almacena neumáticos 
+de vehiculo versus una que almacena componentes para computadoras)
+
+#### Two methods
+
+##### Serpentine
+Los expertos sugieren siempre un almacén estructurado como serpentina, el cual permite a su personal
+recorrer en forma de culebra o "S" hacia adentro y afuera de los pasillos para dejar o recoger los productos necesarios.
+Esto permite que su personal no recorra mas de dos veces cada pasillo para ingresar al otro pasillo. En casos
+donde se utiliza la metodología de  *Obtencion Interactiva de Objetos por Fase (OIOF)*, reduce el tiempo necesario
+para obtener todos aquellos objetos que permiten cumplir con los productos requeridos.
+
+The structure would look like this:S
+
+##### Standard
+
+
 # THIS DOCUMENT IS A WORK IN PROGRESS!
