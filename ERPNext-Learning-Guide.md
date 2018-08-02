@@ -1444,11 +1444,10 @@ de vehiculo versus una que almacena componentes para computadoras)
 #### Two methods
 
 ##### Serpentine
-Los expertos sugieren siempre un almacén estructurado como serpentina, el cual permite a su personal
-recorrer en forma de culebra o "S" hacia adentro y afuera de los pasillos para dejar o recoger los productos necesarios.
-Esto permite que su personal no recorra mas de dos veces cada pasillo para ingresar al otro pasillo. En casos
-donde se utiliza la metodología de  *Obtencion Interactiva de Objetos por Fase (OIOF)*, reduce el tiempo necesario
-para obtener todos aquellos objetos que permiten cumplir con los productos requeridos.
+Experts suggest that you arrange your warehouse in serpentine fashion, which allows your staff
+to move about in a snake or "S" like fashion by weaving in and out of the aisles to drop off or pick up the required items.
+In cases where you use the *Interactive Wave Picking* methodology, it reduces the amount of time used 
+to obtain all those items necessary to fullfill the requirements.
 
 The structure would look like this:S
 
