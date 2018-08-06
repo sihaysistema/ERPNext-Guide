@@ -1449,7 +1449,8 @@ to move about in a snake or "S" like fashion by weaving in and out of the aisles
 In cases where you use the *Interactive Wave Picking* methodology, it reduces the amount of time used 
 to obtain all those items necessary to fullfill the requirements.
 
-The structure would look like this:S
+The structure would look like this:
+![Estanteria-FS-Serpentina](/activos/imagenes/Estanteria-FS-serpentina.png)
 
 ##### Standard
 
