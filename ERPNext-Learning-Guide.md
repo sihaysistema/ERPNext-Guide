@@ -233,6 +233,7 @@ an Item Attribute or a Sales Invoice Item
 ##### 2.2.1.5 - Opening Entry (Video 013)
 #### 2.2.2 - Human Resources
 ##### 2.2.2.1 - Employees (Video 014)
+
 ##### 2.2.2.2 - Branch (Video 015)
 ##### 2.2.2.3 - Department (Video 016)
 ##### 2.2.2.4 - Designation (Video 017)
@@ -1321,10 +1322,43 @@ For all other pushes in the future, just use:
 ##### 15.5.2.8 - Modifying Files (Video 254)
 ##### 15.5.2.9  - Modificando Reports - Query report (Example: Adding columns) (Video 255)
 ##### 15.5.2.10 - Creating Reports - Pages  (Example: Sales Analytics, vs. Sales Analytics 2.0) (Video 258)
-##### 15.5.2.11 - Testing
-##### 15.5.2.12 - Creating Documentation
-##### 15.5.2.13 - Publishing your Application
-##### 15.5.2.14 - Application Maintenance
+##### 15.5.2.11 - Creating Records to be included with Your Application
+Many times, your cusotm application does not need sophisticated functionality, but instead requires useful records to become available or seamlessly appear in the ERPNext instance. Sometimes the amount of data is beyond the Data Import Tool limit. In this case we can bypass the data import tool and simply include them as a default when installing the application.
+
+As you develop your application, add the records for the required doctypes in the most practical manner available to you.
+
+Modify your `hooks.py` so that the `fixtures = []` variable contains the DocType records you wish to include. For example, aside from the Custom Field or Custom Script that you already consider exporting, you wish to include a specific chart of **Accounts**, a set of **Cost Centers** and a bunch of **Item Groups**, then the line in `hooks.py` should read like this:
+
+Before:
+`fixtures = ["Custom Field", "Custom Script"]`
+
+After:
+`fixtures = ["Custom Field", "Custom Script", "Account", "Cost Center", "Item Group"]`
+
+Save the file
+
+Now, with the records neatly entered as you wish them, (and before making a commit and push to your git server), execute the following command on your development server:
+
+cd /home/frappe/frappe-bench/ && bench export-fixtures
+
+This command will create 5 .json files, one for each DocType, inside the `/home/frappe/frappe-bench/apps/[app-name]/[app-name]/fixtures/` directory of  your application, like this:
+
+custom_field.json
+custom_script.json
+account.json
+cost_center.json
+item_group.json
+
+These files will contain all the records that you saved previously, and awhen you install the application on any server, they will be automatically loaded. The user will not have to load them on their own.
+##### 15.5.2.12 - Testing
+Aside from the usual code >try > fail > recode > try again > succeed cycle, tests of the python scripts are crucial to ensure that the code is doing what it is supposed to do.  Within the DocType that you are creating, it is imperative to create that least these three test files:
+test_[doctype-name].py
+test_[doctype-name].js
+test_records.json
+The Python and JavaScript files contain assertions that use the functions you coded as well as local functions and variables to explicitly confirm that the function in the software is doing what it is supposed to do. This process dramatically increases the integrity of the software, and clarifies it for those who are evaluating or auditing the code.
+##### 15.5.2.13 - Creating Documentation
+##### 15.5.2.14 - Publishing your Application
+##### 15.5.2.15 - Application Maintenance
 #### 15.5.3 - Developing ERPNext core
 ##### 15.5.3.1 - How to work with GitHub for contribution to core
 ##### 15.5.3.2 - Sending a Pull Request
