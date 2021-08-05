@@ -28,7 +28,7 @@ It is also incorporating several domain specific functions for industries such a
 
 ERPNext already has basic documentation, videos and a support group with plenty of community members that can support you on your journey to learn how to use this software.
 
-ERPNext also allows your suppliers and customers to access a portal to maange
+ERPNext also allows your suppliers and customers to access a portal to manage
 information related to your company, and it also has a web site for e-commerce.
 
 * Supplier and Customer Portal
